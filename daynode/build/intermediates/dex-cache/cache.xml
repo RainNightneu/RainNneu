@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/duxiao/github/money/daynode/DatePicker/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="face8811ea59807721b1cf7bfa3159169c707ed9">
+        <dex dex="/Users/duxiao/github/money/daynode/app/build/intermediates/pre-dexed/debug/classes_89b7b14ee85c73ad20042756d3ddc243870d9d31.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/duxiao/github/money/daynode/mainnavigatetabbar/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4b61259ce4cd046faad848f1f8048b7a7344a247">
+        <dex dex="/Users/duxiao/github/money/daynode/app/build/intermediates/pre-dexed/debug/classes_8f9a93035362f589c93ca6f98bf056f4bd57b86d.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.study.daynode.common.RichEditText.DeletableEditText
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:cursorVisible="true"
+    android:paddingBottom="@dimen/y20"
+    android:textSize="15sp"
+    android:hint="content"
+    android:minWidth="@dimen/y300"
+    android:selectAllOnFocus="true"
+    android:textColor="#444"
+    android:textCursorDrawable="@drawable/cursor_shape"/>
+
