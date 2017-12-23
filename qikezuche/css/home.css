@@ -1,0 +1,1106 @@
+@media screen and (max-width: 768px){
+*{
+      font-family:"Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu;
+}
+body
+  {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  header
+    {
+        width:100%;
+        height:50px;
+        font-size: 14px;
+        border:0px;
+        margin:0px;
+        padding:0px;
+        background:#FF9600;
+        float: top;
+    }
+
+    #logo
+    {
+      display: none;
+    }
+    #logosmall{
+      margin-left: 10px;
+      margin-top: 8px;      
+    }
+
+    #submit
+    { 
+      border: 1px solid #000;
+        font-size: 14px;
+        /*line-height: 35px;*/
+        background: #FF9600;
+        float: right;
+        margin-top: 12px;
+        margin-right: 10px;
+        margin-left: 13px;
+    }
+
+    #login
+    {
+        border:0px;
+        background: #FF9600;
+        /*line-height: 35px;*/
+        font-size: 14px;
+        float: right;
+        margin-top: 12px;
+        /*margin-right:20px;*/
+    }
+
+    #regist
+    {
+        border:0px;
+        background: #FF9600;
+        /*line-height: 35px;*/
+        font-size: 14px;
+        margin-top: 12px;
+        float: right;
+        margin-left: 7px;
+        /*margin-right: 5px;*/
+    }
+    #selfcenter
+    {
+        border:0px;
+        background: #FF9600;
+        line-height: 35px;
+        margin-top: 7px;
+        font-size: 12px;
+        float: right;
+    }
+    #logout
+    {
+        border:0px;
+        background: #FF9600;
+        line-height: 35px;
+        font-size: 20px;
+        float: right;
+        margin-top: 7px;
+        margin-right:20px;
+    }
+    /*carousel*/
+
+    #carousel-example-generic
+    {
+      /*background-position: center;*/
+    }
+
+    #banner
+    {
+      /*background-position: center;*/
+      /*height: 100%;*/
+    }
+
+    #carousel-div{
+      width: 100%;
+      background-image: url(../image/bannersmall.jpg);
+      background-repeat:no-repeat;
+      /*background-position:100% 100%;*/
+      background-size: 100% 100%;
+      height: 556px;
+      z-index: -1;
+    }
+    /*end carousel*/
+
+    /*end small navbar*/
+
+    /**/
+    #bigtitle1
+    {
+
+        font-size: 30px;
+        color: white;
+        margin-top: 100px;
+        margin-left:auto;
+        margin-right:auto;
+
+    }
+    #smalltitle1
+    {
+        font-size: 14px;
+        color: white;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }#bigtitle2
+    {
+
+        font-size: 30px;
+        color: white;
+        margin-top: 100px;
+        margin-left:auto;
+        margin-right:auto;
+
+    }
+    #smalltitle2
+    {
+        font-size: 14px;
+        color: white;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }#bigtitle3
+    {
+
+        font-size: 30px;
+        color: white;
+        margin-top: 100px;
+        margin-left:auto;
+        margin-right:auto;
+
+    }
+    #smalltitle3
+    {
+        font-size: 14px;
+        color: white;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /*end */
+
+    /*small search*/
+    #timeselect
+    {
+      position: absolute;
+      float: top;
+      margin-top: -290px;
+      margin-left: 50px;
+      margin-right: 50px;
+      /*border:1px solid yellow;*/
+      /*z-index: 1000;*/
+    }
+    .fetchbikediv{
+      height:50px;
+      width: 100%;
+      display:inline-block;
+      background-color:#fff;
+      /*border:1px solid yellow;*/
+      margin-bottom: 10px;
+    }
+
+    .tiplabel{
+      font-size:18px;
+      color:#bbb;
+      font-weight:400;
+      margin-left:10px;
+      margin-top: 12px;
+      width: 90px;
+
+      position: absolute;
+      float: left;
+    }
+    .form_date{
+      height:50px;
+      width: 100%;
+      display: inline-block;
+      width: 100%;
+      padding-left: 90px;
+      /*border:none;*/
+    }
+    .returnbikediv{
+      display:inline-block;
+      background-color:#fff;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .searchbtndiv{
+      display:inline-block;
+      width: 100%;
+      /*border:1px solid yellow;*/
+    }
+    #OK
+    {
+      height:50px;
+      width:100%;
+
+      border:none;
+      background: #FF9600;
+
+      font-size: 18px;
+      font-weight: 400;
+      color: #000;
+    }
+
+    /*end small search*/
+
+    .glyphicon,.input-group-addon
+    {
+      display: none;
+    }
+    span
+    {
+      display: inline;
+    }
+
+    /*small footer*/
+    #footer
+    {
+      text-align: center;
+      padding-top: 50px;
+      margin-bottom: 60px;
+      /*border: 1px solid green;*/
+    }
+    #footer-1{
+      width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        position:relative;/*让子div相对于父div绝对定位*/
+        /*height:75px;*/
+        padding-top: 20px;
+        padding-bottom: 20px;
+        /*border:1px solid yellow;*/
+    }
+    .footermanual{
+      width:50px;
+      display: inline-block;
+      /*border: 1px solid blue;*/
+    }
+    #ownermanualdiv{
+      margin-right: 40px;
+    }
+    #rentermanualdiv{
+/*      position: relative;
+      float: right;
+*/      /*left: 50%;      */
+      /*margin-left: 5px;*/
+    }
+    .footermanualimg{
+      width:50px;
+      height:50px;
+      margin-bottom: 10px;
+    }
+    .footermanuallink{
+      height:10px;
+      font-size:12px;
+      color: #484848;
+      /*margin-top: 20px;*/
+    }
+    a.footermanuallink:hover{
+      color: #ff9600;
+    }
+
+    #footer-2{
+        width:100%;
+        position: relative;/**/
+        /*margin-top: 50px;*/
+        padding-top: 20px;
+        padding-bottom: 20px;
+        /*height:70px;*/
+        /*border: 1px solid blue;*/
+    }
+    .footer2fiv{
+      width:60px;
+      height:70px;
+      display:inline-block;
+    }
+    .footer2fivfirst{
+      margin-right: 50px;
+    }
+    .footer2fivthird{
+      margin-left: 10px;
+    }
+    .footer2fivfourth{
+      margin-left: 10px;
+    }
+    .footer2headlabel{
+      display:inline-block;
+      color:#484848;
+      font-size:14px;
+      font-weight:600;
+      margin-top:0;
+    }
+    .footer2contentlink{
+      display:inline-block;
+      color:#484848;
+      font-size:12px;
+      margin-bottom: 5px;
+    }
+    .footer2fiv>a.footer2contentlink:hover{
+      color: #ff9600;
+    }
+
+    #footer-3{
+      /*height: 70px;*/
+      width: 100%;
+      display: inline-block;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      /*border: 1px solid blue;*/
+    }
+    .footer3contactdivfirst{
+      float: left;
+      width: 25%;
+      margin-left: 25%;
+      /*padding-right: 10px;*/
+      display:inline-block;
+    }
+    .footer3contactdiv{
+      float: left;
+      width: 25%;
+      display:inline-block;
+      padding-left: 28px;
+      /*margin-left: 20px;*/
+      /*border: 1px solid blue;*/
+    }
+    .footer3contactphone{
+      /*margin-left: -10px;*/
+      padding-right: 19px;
+      color:#484848;
+      font-size:14px;
+      font-weight:600;
+    }
+    .footer3contactemail{
+      /*margin-left: -35px;*/
+      padding-right: 9px;
+      color:#484848;
+      font-size:14px;
+      font-weight:600;
+
+    }
+    .footer3contactcontent{
+      color:#484848;
+      font-size:12px;
+    }
+
+    #footer-4{
+      /*border: 1px solid blue;*/
+      /*margin-top: 25px;*/
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width: 100%;
+      display: inline-block;
+      margin-bottom: 50px;
+    }
+    #ScanImg{
+      display: none;
+    }
+    /*end small footer*/
+
+    /*small 屏登录框*/
+    #div1 {
+     display: none;
+     position: absolute;
+
+     /*z-index: 1000;*/
+     height: 100%;
+     width: 100%;
+     top: 0;
+     left: 0;
+     background-color: #000;
+    }
+    
+    #div2 {
+
+      display: none;
+      position: absolute;
+      /*z-index: 1001;*/
+      height: 380px;
+      width: 300px;
+      left: 50%;
+      margin-left: -150px;
+      top: 140px;
+      z-index: 100;
+    }
+    #logintext
+    {
+      position: absolute;
+      height: 60px;
+      width: 100%;
+      font-size: 18px;
+      background-color: #FF9600;
+      z-index: 10;
+    }
+    #loginhead{
+      margin-top: 18px;
+      margin-left: 140px;
+    }
+
+    #closeit{ 
+     border:0;
+     width:40px;
+     position:relative;
+     float: right;
+     font-size:40px;
+     z-index: 10;
+     background-color:#FF9600;
+     height: 58px;
+    }
+
+    #setopacitydiv{
+      width: 100%;
+      height: 380px;
+      background-color:#efefef;
+      alpha(opacity=80);
+      opacity: 0.8;
+      z-index: 1;
+    }
+    /*距离登录框顶部60px*/
+    #loginframe{
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      z-index: 10;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    .loginitemphone{
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .loginitempw{
+      margin-top: 10px;
+    }
+    .loginitemvcode{
+      margin-top: 10px;
+    }
+    .loginitemimg{
+       position:absolute;
+       margin-top:10px;
+       margin-left:10px;
+    }
+    #tell,#password,#subLogin,#subregist
+    {
+      width: 100%;
+      height: 40px;
+      background-color: #fff;
+      outline-color: #ff9600;
+      border: none;
+    }
+    #tell,#password,#vcode{
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 40px;
+    }
+
+    #vcode
+    {
+      width: 165px;
+      height: 40px;
+      border: none;
+      outline-color: #ff9600;
+    }
+    #createcode{
+      width: 70px;
+      height: 40px;
+      vertical-align: top;
+    }
+
+    #chkRememberPass{
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+    #chkrmpwlabel{
+      float: left;
+      font-weight: 14px;
+      font-weight: 400;
+    }
+    .findpwa{
+      color: #484848;
+      cursor: pointer;
+      margin-top: 7px;
+      float: right;
+      font-weight: 400;
+    }
+    a.findpwa:hover{
+      text-decoration: none;
+       color:#ff9600;
+    }
+    #findpwlabel{
+      margin-top: 5px;
+      float: right;
+      font-weight: 400;
+    }
+    #subLogin{
+      margin-top: 10px;
+      background-color: #ff9600;
+      border: none;
+    }
+    #subregist{
+      background-color: #fff;
+    }
+    #regisbtndiv{
+      margin-top: 10px;
+    }
+    /*end 小屏登陆框*/
+
+
+  span.input-group-addon
+  {
+    display: none;
+  }  
+  #png1,#png2
+  {
+    display: none;
+  }
+
+
+
+}
+
+@media screen and (min-width: 768px){
+*{
+      font-family:"Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu;
+}
+body
+{
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+    /*big navbar*/
+  header
+    {
+        width:100%;
+        height:60px;
+        font-size: 15px;
+        border:0px;
+        margin:0px;
+        padding:0px;
+        background:#FF9600;
+        float: top;
+    }
+
+    #logo
+    {
+		  margin-top:12px;
+      margin-left: 100px;
+    }
+    #logosmall{
+      display: none;
+    }
+
+    #login
+    {
+         border:0px;
+        background: #FF9600;
+        line-height: 50px;
+        margin-top:5px;
+
+        font-size: 14px;
+        color: #000;
+
+        float: right;
+        margin-right: 20px;
+        padding-right: 0px;
+    }
+
+    #regist
+    {
+      border:0px;
+      background: #FF9600;
+      line-height: 50px;
+      margin-top:5px;
+
+      font-family: "微软雅黑";
+      font-size: 14px;
+      color: #000;
+
+      float: right;
+      margin-right: 20px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    #submit
+    {
+      width: 90px;
+      height: 30px;
+      border: 1px solid #000;
+
+      font-size: 14px;
+      color: #000;
+
+      /*line-height: 40px;*/
+      background: #FF9600;
+      float: right;
+      margin-top:15px;
+      margin-right: 100px;
+    }
+
+    #selfcenter
+    {
+        border:0px;
+        background: #FF9600;
+        /*line-height: 50px;*/
+        margin-top:20px;
+        font-size: 14px;
+        color: #000;
+        float: right;
+        margin-right: 20px
+    }
+    #logout
+    {
+        border:0px;
+        background: #FF9600;
+        line-height: 50px;
+        font-size: 20px;
+        float: right;
+        margin-top:5px;
+        margin-right:25px;
+    }
+    /*end big navbar*/
+
+  
+
+    /*big carousel*/
+    #carousel-div{
+      width: 100%;
+      background-image: url(../image/banner.jpg);
+      background-size: 100% 100%;
+      height: 620px;
+
+    }
+
+    #bigtitle1
+    {
+        font-size: 45px;
+        color: white;
+
+        position: absolute;
+        left: 50%;
+        margin-left: -397px;
+        top:120px;
+
+        text-align: center;
+    }
+    #smalltitle1
+    {
+        font-size: 25px;
+        font-weight: 300;
+        color: white;
+
+        position: absolute;
+        left: 50%;
+        margin-left: -336px;
+        top:190px;
+        text-align: center;
+    }
+    #bigtitle2
+    {
+        font-size: 45px;
+        color: white;
+
+        position: absolute;
+        left: 50%;
+        margin-left: -269px;
+        top:120px;
+
+        text-align: center;
+    }
+    #smalltitle2
+    {
+        font-size: 25px;
+        font-weight: 300;
+        color: white;
+        
+        position: absolute;
+        left: 50%;
+        margin-left: -176px;
+        top:190px;
+        text-align: center;
+    }
+    #bigtitle3
+    {
+        font-size: 45px;
+        color: white;
+
+        position: absolute;
+        left: 50%;
+        margin-left: -294px;
+        top:120px;
+
+        text-align: center;
+        /*margin: 0px auto;*/
+    }
+    #smalltitle3
+    {
+        font-size: 25px;
+        font-weight: 300;
+        color: white;
+        
+        position: absolute;
+        left: 50%;
+        margin-left: -126px;
+        top:190px;
+        text-align: center;
+    }
+    /*end big carousel*/
+
+    /*big search*/
+    #timeselect
+    {    
+      height:50px;
+      width:660px;
+      position:absolute;
+      left:50%;
+      top: 340px;
+      margin-left:-330px;
+    }
+    .fetchbikediv{
+      height:50px;
+      width:245px;
+      display:inline-block;
+      background-color:#fff;
+      margin-right:0px;
+    }
+
+    .tiplabel{
+      position: absolute;
+      line-height: 50px;
+      font-size:18px;
+      color:#bbb;
+      font-weight:400;
+      margin-left:10px;
+    }
+    .form_date{
+      height:50px;
+      width: 100%;
+      padding-left: 90px;
+      float: right;
+      border:none;
+    }
+    .returnbikediv{
+      display:inline-block;
+      width:245px;
+      margin-left:5px;
+      background-color:#fff;
+    }
+    .searchbtndiv{
+      display:inline-block;
+      width:145px;
+      margin-left:5px;
+      vertical-align: top;
+    }
+    #OK
+    {
+      height:50px;
+      width:100%;
+
+      border:none;
+      background: #FF9600;
+
+      font-size: 18px;
+      font-weight: 400;
+      color: #000;
+    }
+    /*end big search*/
+
+    /*big footer*/
+    #footer
+    {
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 60px;
+      margin-bottom: 60px;
+    }
+    #footer-1{
+        /*width:33.2%;*/
+        position:relative;/*让子div相对于父div绝对定位*/
+        height:70px;
+        /*width:340px;*/
+        float:left;
+    }
+    .footermanual{
+      width:50px;
+      /*height:60px;*/
+      display: inline-block;
+      margin-right: 40px;
+      /*border: 1px solid blue;*/
+    }
+    #ownermanualdiv{
+      position: relative;
+      float: right;
+      margin-right: 60px;
+      /*left: 50%;*/
+      /*margin-left: -55px;*/
+    }
+    #rentermanualdiv{
+      position: relative;
+      float: right;
+      /*left: 50%;      */
+      /*margin-left: 5px;*/
+    }
+    .footermanualimg{
+      width:50px;
+      height:50px;
+      margin-bottom: 10px;
+    }
+    .footermanuallink{
+      height:10px;
+      font-size:12px;
+      color: #484848;
+      /*margin-top: 20px;*/
+    }
+    a.footermanuallink:hover{
+      color: #ff9600;
+    }
+
+    #footer-2{
+        width:190px;
+        position: relative;/**/
+        float:left;
+        height:70px;
+        /*border: 1px solid blue;*/
+    }
+    .footer2fiv{
+      width:60px;
+      height:70px;
+      display:inline-block;
+    }
+    .footer2fivfirst{
+      margin-right: 30px;
+    }
+    .footer2fivthird{
+      margin-left: 10px;
+    }
+    .footer2fivfourth{
+      margin-left: 10px;
+    }
+    .footer2headlabel{
+      display:inline-block;
+      color:#484848;
+      font-size:14px;
+      font-weight:600;
+      margin-top:0;
+    }
+    .footer2contentlink{
+      display:inline-block;
+      color:#484848;
+      font-size:12px;
+      margin-bottom: 5px;
+    }
+    .footer2fiv>a.footer2contentlink:hover{
+      color: #ff9600;
+    }
+
+    #footer-3{
+      height: 70px;
+      /*width:267px;*/
+      display: inline-block;
+      float:left;
+      padding-left: 20px;
+      /*border: 1px solid blue;*/
+    }
+    .footer3contactdiv{
+      /*margin-right: 30px;*/
+      /*width:120px;*/
+      display:inline-block;
+    }
+    .footer3contactdivfirst{
+      display:inline-block;
+      margin-right: 30px;
+      margin-left: 10px;
+    }
+    .footer3contactphone{
+      margin-left: -30px;
+      color:#484848;
+      font-size:14px;
+      font-weight:600;
+    }
+    .footer3contactemail{
+      margin-left: -60px;
+      color:#484848;
+      font-size:14px;
+      font-weight:600;
+
+    }
+    .footer3contactcontent{
+      color:#484848;
+      font-size:12px;
+    }
+
+    #footer-4{
+      position: relative;
+      display: inline-block;
+      /*width: 340px;*/
+      height: 70px;
+      float: left;
+    }
+    #ScanImg{
+      margin-left: 60px;
+      float:left;
+    }
+    #ScanImgSmall{
+      display: none;
+    }
+    /*end big footer*/
+
+    /*big bottom*/
+    /*end big bottom*/
+
+
+
+  /*大屏登录框*/
+  /*背景*/
+  #div1 {
+   display: none;
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background-color: #000;
+  }
+ 
+  #div2 {
+
+    display: none;
+    position: absolute;
+    /*z-index: 1001;*/
+    height: 380px;
+    width: 360px;
+    left: 50%;
+    margin-left: -180px;
+    top: 140px;
+    /*z-index: 0;*/
+    /*background-color: #;*/
+
+  }
+
+  #logintext
+  {
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    font-size: 18px;
+    background-color: #FF9600;
+    color: #000;
+    z-index: 10;
+  }
+  #loginhead{
+    margin-top: 18px;
+    margin-left: 170px;
+  }
+
+  #closeit{ 
+   border:0;
+   width:40px;
+   position:relative;
+   float: right;
+   font-size:40px;
+   z-index: 10;
+   background-color:#FF9600;
+   height: 58px;
+  }
+
+  #setopacitydiv{
+    width: 100%;
+    height: 380px;
+    background-color:#efefef;
+    alpha(opacity=90);
+    opacity: 0.9;
+    z-index: 1;
+  }
+  /*距离登录框顶部60px*/
+  #loginframe{
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    z-index: 10;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .loginitemphone{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .loginitempw{
+    margin-top: 10px;
+  }
+  .loginitemvcode{
+    margin-top: 10px;
+  }
+  .loginitemimg{
+     position:absolute;
+     margin-top:10px;
+     margin-left:10px;
+  }
+  #tell,#password,#subLogin,#subregist
+  {
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    outline-color: #ff9600;
+    border: none;
+  }
+  #tell,#password,#vcode{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+  }
+  #vcode
+  {
+    width: 165px;
+    height: 40px;
+    border: none;
+    outline-color: #ff9600;
+  }
+  #createcode{
+    width: 70px;
+    height: 40px;
+    vertical-align: top;
+  }
+
+  #chkRememberPass{
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  #chkrmpwlabel{
+    float: left;
+    font-weight: 14px;
+    font-weight: 400;
+    color: #484848;
+  }
+  label#chkrmpwlabel:hover{
+    color: #ff9600;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .findpwa{
+    color: #484848;
+    cursor: pointer;
+    margin-top: 7px;
+    float: right;
+    font-weight: 400;
+  }
+  a.findpwa:hover{
+    text-decoration: none;
+     color:#ff9600;
+  }
+  #subLogin{
+    margin-top: 10px;
+    background-color: #ff9600;
+    border: none;
+  }
+  #subregist{
+    background-color: #fff;
+  }
+  #regisbtndiv{
+    margin-top: 10px;
+  }
+  /*end 大屏登陆框*/
+
+
+
+span.input-group-addon
+{
+  display: none;
+}  
+#png1,#png2
+{
+  display: none;
+}
+
+
+
+
+}
+

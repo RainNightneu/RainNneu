@@ -1,0 +1,203 @@
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 引入时间选择器 -->
+   	<link rel="stylesheet" type="text/css" href="./datetimepicker/bootstrap-datetimepicker.css">
+   	<link rel="stylesheet" type="text/css" href="./datetimepicker/bootstrap-datetimepicker.min.css">
+
+
+<!-- qikezuche.com Baidu tongji analytics -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "//hm.baidu.com/hm.js?d3defd60a61e51e627448799c2f72d2f";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "//hm.baidu.com/hm.js?1a95a252d89af21d9467d03e097e8b2f";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+
+<body>
+
+<header>
+
+  <a href="index.php"><img id="logosmall" src="./image/logosmall.png"></a>
+  <a href="index.php"><img id="logo" src="./image/logo.png"></a>
+        
+<?php
+if($name=='')
+{
+echo <<<EOT
+<button id="submit" onclick="click1();" >发布车辆</button>
+<button id="regist" onclick="window.location.href='html/regist.html';">注册</button>
+<button id="login" onclick="openme();">登录</button>
+EOT;
+}
+else
+{
+
+echo '<button id="submit" onclick="click1();" >发布车辆</button> ';
+echo "<button id='selfcenter' onclick='click3();'>欢迎,".$name."</button>";
+}
+
+?>
+</header>
+
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div id="carousel-div"  class="carousel-inner" role="listbox">
+    <div class="item active" style="text-align:center;">
+    <!-- <img id="banner" src="image/banner.jpg" style="width:100%;"> -->
+    <p id="bigtitle1">欢迎各位单车旅行爱好者加入骑客租车！</p>
+    <p id="smalltitle1">我们致力于为您提供安全，便捷，可靠，全面的P2P租车服务</p>
+
+    </div>
+
+    <div class="item" style="text-align:center;">
+    <!-- <img  id="banner" src="./image/banner.jpg" style="width:100%;"> -->
+    <p id="bigtitle2">出租闲置单车获取可观收入</p>
+    <p id="smalltitle2">资源共享，绿色出行，健康生活</p>
+
+    </div>
+
+    <div class="item" style="text-align:center;">
+    <!-- <img id="banner" src="image/banner.jpg" style="width:100%;"> -->
+    <p id="bigtitle3">挑选喜欢的单车享受骑客生活</p>
+    <p id="smalltitle3">便捷，低价，就近取车</p>
+
+    </div>
+
+  <!-- Controls -->
+  </div>
+</div>
+
+
+
+<div id="timeselect">
+  <div id="FecthBikeDiv" class="fetchbikediv">
+    <label class="tiplabel">取车时间</label>
+    <input type="text" id="starttimecal" name="starttime" class="starttimecal form_date" readonly/>
+  </div>
+  <div id="#ReturnBikeDiv" class="returnbikediv">
+    <label class="tiplabel">还车时间</label>
+    <input type="text" id="endtimecal" name="endtime" class="endtimecal form_date" readonly/>
+  </div>
+  <div id="SearchBtnDiv" class="searchbtndiv">
+    <input type="button" id="OK" onclick="submittime()" value="搜索单车"/>
+  </div>
+</div>
+
+
+
+<div id="footer">
+<div style="display:table;margin:auto">
+  <div id="footer-1">
+    <div id="ownermanualdiv" class="footermanual">
+      <a class="footermanuallink" href="./html/ownermanual.html"><img class="footermanualimg" src="./image/owner.png">
+      车主指南</a>
+    </div><div id="rentermanualdiv" class="footermanual">
+      <a href="./html/rentermanual.html" class="footermanuallink"><img class="footermanualimg" src="./image/renter.png">
+      租客指南</a>
+    </div>
+  </div><div id="footer-2">
+    <div class="footer2fiv footer2fivfirst">
+      <p class="footer2headlabel">关于我们</p>
+      <a class="footer2contentlink" href="./html/about.html">关于骑客</a>
+      <a href=" ./html/contact.html" class="footer2contentlink">联系我们</a>
+    </div><div class="footer2fiv">
+      <p class="footer2headlabel">网站协议</p>
+      <a href="./html/service.html" class="footer2contentlink">服务协议</a>
+      <a href="./html/privacy.html" class="footer2contentlink">隐私保护</a>
+    </div>
+  </div><div id="footer-3" >
+    <div class="footer3contactdivfirst">
+      <p class="footer3contactphone">客服电话</p>
+      <p class="footer3contactcontent">151-1792-8812</p>      
+    </div><div class="footer3contactdiv">
+      <p class="footer3contactemail">客服邮箱</p>
+      <p class="footer3contactcontent">qikezuche@163.com</p>
+    </div>
+  </div><div id="footer-4">
+    <img id="ScanImg" src="./image/wechattt.jpg">
+	  <img id="ScanImgSmall" src="./image/wechat.jpg">
+  </div>
+
+  </div>
+</div>		
+
+
+<div id="div1"></div>
+<div id="div2">
+  <div id="logintext">
+    <label id="loginhead">登录</label>
+    <button id="closeit" onclick="closeme();">&times;</button>
+  </div>
+  
+  <div id="setopacitydiv"></div>
+
+  <div id="loginframe">
+    <div class="loginitemphone">
+      <img class="loginitemimg" src="image/loginhead.png">
+      <!-- <div style="display:inline-block"> -->
+        <input type="text" id="tell"  name="tell" placeholder="请输入手机号"/>
+      <!-- </div> -->
+    </div>
+
+    <div class="loginitempw">
+      <img class="loginitemimg" src="image/loginpw.png">
+      <input type="password" id="password" name="password" placeholder="请输入密码"/>
+    </div>
+
+    <div class="loginitemvcode">
+      <img class="loginitemimg" src="image/loginvcode.png">
+      <input input type="text" id="vcode" value="" placeholder="请输入验证码"/>
+      <img id="createcode" src="vcode/vcode.php" onclick="chv(this);"/>
+    </div>
+
+    <div>
+      <label id="chkrmpwlabel"><input type="checkbox" id="chkRememberPass" name="chkRememberPass"/>&nbsp;记住密码</label>
+      <a class="findpwa" href="html/findpassword.html">忘记密码？</a>      
+    </div>
+
+    <div>
+      <input type="button" id="subLogin" name="subLogin"value="登 录" onclick="userLogin()"/>
+    </div>
+
+    <div id="regisbtndiv">
+      <input type="button" id="subregist"  value="没有账号，点击注册" onclick=" window.location.href='./html/regist.html' ;"/>
+    </div>
+
+  </div>
+</div>
+
+
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="./datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+
+<script src="js/home.js"></script>
+</script>
+</body>
+</html>
