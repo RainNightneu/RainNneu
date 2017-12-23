@@ -1,0 +1,377 @@
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+
+	<title>骑客租车后台管理页面</title>
+</head>
+<style type="text/css">
+Header
+{
+    width: 100%;
+    height: 60px;
+    background-color: #ff9600;
+}
+#homepage
+{
+	margin: auto;
+}
+#users
+{
+	margin: auto;
+	width: 80%;
+}
+#bikes
+{
+	margin: auto;
+	width: 80%;
+}
+#orders
+{
+	margin: auto;
+	width: 80%;
+}
+.user_pic
+{
+	color:blue;
+}
+ #div2 
+ {
+
+      display: none;
+      position: absolute;
+      /*z-index: 1001;*/
+      height: 380px;
+      width: 300px;
+      left: 30%;
+      margin-left: -150px;
+      top: 100px;
+      z-index: 100;
+ }
+ #showclickpic
+ {
+ 	width: 800px;
+ 	height: 600px;
+ }
+ .order_agree{
+ 	color: #fff;
+ 	background-color: #ff9600;
+ 	border: none;
+ 	width: 60px;
+ 	height: 30px;
+ 	margin-left: 10px;
+ 	margin-right: 10px;
+ }
+ .order_refuse{
+ 	color: #fff;
+ 	background-color: red;
+ 	border: none;
+ 	width: 60px;
+ 	height: 30px;
+ }
+ button.order_agree:hover,button.order_refuse:hover{
+ 	cursor: pointer;
+ }
+ table,tr,td{
+ 	border: 1px solid #ddd;
+ }
+ td{
+ 	text-align: center;
+ }
+ table{
+ 	;
+ }
+</style>
+<body>
+<header>
+</header>
+
+	<div id="homepage">
+		<!--统计页面-->
+		<div id="statistics">
+		</div>
+		<br>
+		<!--用户验证页面-->
+		<img src="" >
+		<div id="users">
+			<?php
+				$sql_user="select * from user where mark=3 limit 0,$perPage ";
+				$result_user=mysql_query($sql_user);
+				echo "<table cellspacing=0px>";
+				echo "<tr><td>序号</td><td>姓名</td><td>身份证号</td><td>手机号</td><td>高校名称</td><td>学号</td><td>身份证正面</td><td>身份证背面</td><td>学生证照片</td><td>时间</td><td>操作</td></tr>";
+				while($row_user=mysql_fetch_assoc($result_user))
+				{
+					$arr1=explode("/",$row_user['idfront']);
+					$arr2=explode("/",$row_user['idback']);
+					$arr3=explode("/",$row_user['stucard']);
+					$tail1=explode(".",$arr1[3]);
+					$tail2=explode(".",$arr2[3]);
+					$tail3=explode(".",$arr3[3]);
+					$head=substr($arr1[3],0,6).".".$tail1[1];
+					$front=substr($arr2[3],0,6).".".$tail2[1];
+					$back=substr($arr3[3],0,6).".".$tail3[1];
+					//var_dump($arr1);
+					echo "<tr><td>".$row_user['uid']."</td><td>".$row_user['realname']."</td><td>".$row_user['idnumber']."</td><td>".$row_user['tell']."</td><td>".$row_user['school']."</td><td>".$row_user['stuid']."</td><td><p onclick='showfrontpic(this);' class='user_pic'>".$head."</p></td><td><p onclick='showbackpic(this);' class='user_pic'>".$front."</p></td><td><p onclick='showschpic(this);' class='user_pic'>".$back."</p></td><td>".$row_user['regtime']."</td><td><span onclick='acceptuser(this);' class='order_agree'>通过</span><span onclick='refuseuser(this);' class='order_refuse'>拒绝</span>|<span>详情</span></td></tr>";
+				}
+				echo "</table>";
+				echo "<p style='margin-left:900px;'><a href=''>>>>更多用户</a></p>";
+			?>
+		</div>
+		<br>
+		<!--单车审核页面-->
+		<div id="bikes">
+			<?php
+			$sql_bike="select * from bike  where bikecondition=2 order by uploadtime desc limit 0,$perPage ";
+			$result_bike=mysql_query($sql_bike);
+			echo "<table cellspacing=0px>";
+			echo "<tr><td>序号</td><td>车辆名称</td><td>单车类型</td><td>单车数量</td><td>新旧程度</td><td>新车价格</td><td>单车照片</td><td>车主姓名</td><td>审核状态</td><td>时间</td><td>操作</td></tr>";
+			while($row_bike=mysql_fetch_assoc($result_bike))
+			{
+				if($row_bike['bikecondition']==2)
+				{
+					$condition="待处理";
+				}
+			   echo "<tr><td>".$row_bike['bid']."</td><td>".$row_bike['bikename']."</td><td>".$row_bike['biketype']."</td><td>".$row_bike['bikenum']."</td><td>".$row_bike['howold']."</td><td>".$row_bike['bikeprice']."</td><td><p onclick='showbikepic(this);' class='user_pic'>".$row_bike['thumbphoto1']."</p></td><td>".$row_bike['username']."</td><td>等待审核</td><td>".$row_bike['uploadtime']."</td><td><a href='./change_bike.php?bid=".$row_bike['bid']."'>详情<a></td></tr>";
+			}
+			echo "</table>";
+			echo "<p style='margin-left:900px;'><a href=''>>>>更多单车</a></p>";
+			?>
+		</div>
+		<br>
+		<!--订单管理页面-->
+		<div id="orders">
+			<?php
+			$i=1;
+			$current_time=mktime();
+			  $sql_order="select * from bikeorder where ordercondition=1 order by ordertime desc limit 0,$perPage ";
+			$result_order=mysql_query($sql_order);
+			echo "<table cellspacing=0px>";
+			echo "<tr><td>序号</td><td>订单号</td><td>订单状态</td><td>异常原因</td><td>租客姓名</td><td>租客手机</td><td>车主姓名</td><td>车主手机</td><td>时间</td><td>操作</td></tr>";
+			while($row_order=mysql_fetch_assoc($result_order))
+			{
+				if($current_time-strtotime($row_order['ordertime'])>7200)
+				{
+					echo "<tr><td>".$i."</td><td>".$row_order['oid']."</td><td>等待车主处理</td><td>车主超时未处理</td><td>".$row_order['rentername']."</td><td>".$row_order['rentertell']."</td><td>车主姓名</p></td><td>".$row_order['owner']."</td><td>".$row_order['ordertime']."</td><td><a href=''><span>详情&nbsp;</span></a><button class='order_agree'  onclick='comfirmorder(this);'>确认</button><button  class='order_refuse' onclick='cancelorder(this);'>拒绝</button></td></tr>";
+					 $i++;
+				}
+			}
+			echo "</table>";
+			?>
+		</div>
+
+	</div>
+<div id="div2">
+	<img id="showclickpic" src="" onclick="closeme();">
+</div>
+<footer>
+</footer>
+</body>
+</html>
+
+
+<script type="text/javascript">
+function showfrontpic(a)
+{
+	var node=a.parentNode.parentNode;
+	var pic=a.innerHTML;
+	var tell=nth(node,"td",3).innerHTML;
+	var arr=pic.split('.');
+	var pic_src="../bike/cards/"+arr[0]+tell+'id.'+arr[1];
+	document.getElementById("showclickpic").src=pic_src;
+	openme();
+	//alert(pic_src);
+}
+
+function showbackpic(a)
+{
+	var node=a.parentNode.parentNode;
+	var pic=a.innerHTML;
+	var tell=nth(node,"td",3).innerHTML;
+	var arr=pic.split('.');
+	var pic_src="../bike/cards/"+arr[0]+tell+'idback.'+arr[1];
+	document.getElementById("showclickpic").src=pic_src;
+	openme();
+}
+
+
+function showschpic(a)
+{
+	var node=a.parentNode.parentNode;
+	var pic=a.innerHTML;
+	var tell=nth(node,"td",3).innerHTML;
+	var arr=pic.split('.');
+	var pic_src="../bike/cards/"+arr[0]+tell+'sch.'+arr[1];
+	document.getElementById("showclickpic").src=pic_src;
+	openme();
+}
+
+
+function showbikepic(a)
+{
+	var pic_src=a.innerHTML;
+	document.getElementById("showclickpic").src=pic_src;
+	openme();
+}
+
+
+function nth(parent,ele,num)
+{
+var _ele=Array.prototype.slice.call(parent.childNodes),eleArray=[];
+//将父节点的子节点转换成数组_ele;eleArray为只储存元素节点的数组
+for(var i= 0,len=_ele.length;i<len;i++)
+{
+	if(_ele[i].nodeType==1)
+	{
+		eleArray.push(_ele[i]);//过滤掉非元素节点
+	}
+}
+if(arguments.length===2)
+{
+//如果只传入2个参数，则如果第二个参数是数字，则选取父节点下的第几个元素
+//如果第二个参数是字符串，则选取父节点下的所有参数代表的节点
+if(typeof arguments[1]==="string")
+{
+_ele=Array.prototype.slice.call(parent.getElementsByTagName(arguments[1]));
+return _ele;
+}else if(typeof arguments[1]==="number")
+{
+return eleArray[arguments[1]];
+}
+}else{
+//如果参数齐全，则返回第几个某节点,索引从0开始
+_ele=Array.prototype.slice.call(parent.getElementsByTagName(ele));
+return _ele[num];
+}
+}
+
+
+function openme()
+{
+document.getElementById('div2').style.display='block';
+document.getElementsByTagName('body')[0].style.background = 'black';
+document.getElementsByTagName('body')[0].style.opacity = 0.5;
+}
+
+function closeme(){
+document.getElementById('div2').style.display='none';
+document.getElementsByTagName('body')[0].style.background = '#FFFFFF';
+document.getElementsByTagName('body')[0].style.opacity = 1;
+}
+
+function createXMLHttpRequest()
+{
+	var xmlHttp=null;
+	if(window.XMLHttpRequest)
+	{
+		xmlHttp=new XMLHttpRequest();
+	}
+	else
+	{
+		xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	return xmlHttp;
+}
+
+function acceptuser(a)
+{
+	var node=a.parentNode.parentNode;
+	var tell=nth(node,"td",3).innerHTML;
+	var data="ope="+0+"&tell="+tell;
+	var xml=createXMLHttpRequest();
+	 xml.open("POST","handleuser.php",true);
+     xml.setRequestHeader("Content-Type","application/x-www-form-urlencoded;");
+     xml.onreadystatechange=function()
+     {
+     	 if (xml.readyState==4 && xml.status==200)
+     	 {
+     	 	if(xml.responseText == 0)
+     	 	{
+     	 		alert("Success!");
+     	 	}
+     	 	else
+     	 	{
+     	 		alert(xml.responseText);
+     	 	}
+     	 }
+     }
+     xml.send(data);
+
+}
+
+function refuseuser(a)
+{
+	var node=a.parentNode.parentNode;
+	var tell=nth(node,"td",3).innerHTML;
+	var data="ope="+1+"&tell="+tell;
+	var xml=createXMLHttpRequest();
+	 xml.open("POST","handleuser.php",true);
+     xml.setRequestHeader("Content-Type","application/x-www-form-urlencoded;");
+     xml.onreadystatechange=function()
+     {
+     	 if (xml.readyState==4 && xml.status==200)
+     	 {
+     	 	if(xml.responseText == 0)
+     	 	{
+     	 		alert("Success!");
+     	 	}
+     	 	else
+     	 	{
+     	 		alert(xml.responseText);
+     	 	}
+     	 }
+     }
+     xml.send(data);
+}
+
+function comfirmorder(a)
+{
+	var node=a.parentNode.parentNode;
+	var oid=nth(node,"td",1).innerHTML;
+	var data="ope="+0+"&oid="+oid;
+	var xml=createXMLHttpRequest();
+	 xml.open("POST","handleorder.php",true);
+     xml.setRequestHeader("Content-Type","application/x-www-form-urlencoded;");
+     xml.onreadystatechange=function()
+     {
+     	 if (xml.readyState==4 && xml.status==200)
+     	 {
+     	 	if(xml.responseText == 0)
+     	 	{
+     	 		alert("Success!");
+     	 	}
+     	 	else
+     	 	{
+     	 		alert(xml.responseText);
+     	 	}
+     	 }
+     }
+     xml.send(data);
+
+}
+
+function cancelorder(a)
+{
+	var node=a.parentNode.parentNode;
+	var oid=nth(node,"td",1).innerHTML;
+	var data="ope="+1+"&oid="+oid;
+	var xml=createXMLHttpRequest();
+	 xml.open("POST","handleorder.php",true);
+     xml.setRequestHeader("Content-Type","application/x-www-form-urlencoded;");
+     xml.onreadystatechange=function()
+     {
+     	 if (xml.readyState==4 && xml.status==200)
+     	 {
+     	 	if(xml.responseText == 0)
+     	 	{
+     	 		alert("Success!");
+     	 	}
+     	 	else
+     	 	{
+     	 		alert(xml.responseText);
+     	 	}
+     	 }
+     }
+     xml.send(data);
+}
+
+
+</script>

@@ -1,0 +1,1046 @@
+@media screen and (max-width: 768px){
+*{
+	font-family:"Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu;
+}
+/*small navbar*/
+#header
+{
+	width:100%;
+	height:50px;
+	font-size: 14px;
+	border:0px;
+	margin:0px;
+	padding:0px;
+	background:#FF9600;
+	float: top;
+}
+
+#logo
+{
+display: none;
+}
+#logosmall{
+margin-left: 10px;
+margin-top: 8px;      
+}
+img#logosmall:hover{
+	cursor: pointer;
+}
+
+#submit
+{ 
+  border-width: 1px;
+  border-color: #000;
+  font-size: 14px;
+  /*line-height: 35px;*/
+  background: #FF9600;
+  float: right;
+  margin-top: 12px;
+  margin-right: 10px;
+  margin-left: 13px;
+}
+
+#login
+{
+	border:0px;
+	background: #FF9600;
+	font-size: 14px;
+	float: right;
+	margin-top: 12px;
+}
+
+#regist
+{
+	border:0px;
+	background: #FF9600;
+	font-size: 14px;
+	margin-top: 12px;
+	float: right;
+	margin-left: 7px;
+}
+#selfcenter
+{
+	border:0px;
+	background: #FF9600;
+	line-height: 35px;
+	margin-top: 7px;
+	font-size: 12px;
+	float: right;
+}
+#logout
+{
+	border:0px;
+	background: #FF9600;
+	line-height: 35px;
+	font-size: 20px;
+	float: right;
+	margin-top: 7px;
+	margin-right:20px;
+}
+/*end small navbar*/
+
+	#mainblock{
+		width: 100%;
+	}
+
+    #leftblock
+    {
+    	overflow-y: scroll;
+    	overflow-x: hidden;
+		   
+		width: 100%;
+	}
+
+	#searchbar{
+		width: 100%;
+		background-color: #eee;
+		/*border: 1px solid blue;*/
+		padding-top: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 20px;	
+	}
+	.searchdivcity,.searchdivschool,.searchfetchtimediv,.searchreturntimediv{
+		display: inline-block;
+		width: 49%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	#citylabel,#schoollabel,#starttimelabel,#endtimelabel{
+		color: #bbb;
+		font-size: 14px;
+		font-weight: 400;
+	}
+	.citylist,.schoollist,.form_date{
+		padding-left: 10px;
+		width: 100%;
+		height: 30px;
+		border: none;
+		outline-color: #ff9600;
+	}
+	.citylist,.schoollist{
+		/*background-color: #ff9600;*/
+		/*color: #ff9600;*/
+
+	}
+	.searchfetchtimediv{
+		margin-top: 10px;
+	}
+
+	.spreadsearchdetaildiv{
+		padding-left: 10px;
+		padding-right: 10px;
+		/*margin-bottom: 20px;*/
+	}
+	#spreaddetailsearch{
+		height: 40px;
+		width: 100%;
+		background-color: #ff9600;
+		color: #000;
+		border: none;
+	}
+
+	    #collapseExample{
+	    	padding-left: 10px;
+	    	padding-right: 10px;
+	    	padding-top: 20px;
+	    }
+		#collapseExample>label{
+			color: #bbb;
+			font-size: 14px;
+			font-weight: 400;
+		}
+
+	.selectitemheightdiv{
+		width:49%;
+		display:inline-block;
+		padding-right:10px;
+		margin-bottom:10px;
+	}
+
+	#fitheight{
+		width:100%;
+		height: 30px;
+		border: none;
+		outline-color: #ff9600;
+	}
+
+	.selectitempricediv{
+		width:49%;
+		display:inline-block;
+		padding-left:10px;
+		/*border: 1px solid blue*/
+	}
+
+	#price{
+		border: none;
+		outline-color: #ff9600;
+		width:100%;
+		height: 30px;
+	}
+
+
+    #starttime{
+    	height: 30px;
+    }
+	 
+
+	   
+
+
+	.searchdetaillabel{
+		
+		color: #bbb;
+		font-size: 14px;
+		font-weight: 400;
+	}
+	.selectul{
+		padding-left: 0px;
+		margin-bottom: 0px;
+	}
+
+
+	    .selectul>li{
+	    	list-style: none;
+	    	display: inline-block;
+	    }
+
+
+
+	   
+
+	    #clicktosearch{
+	    	background-color:#FF9600;
+	    	height: 40px;
+	    	width: 100%;
+	    	border: none;
+	    	color: #000;
+	    }
+
+
+	#spreaddetailsearch{
+		margin-top: 10px;
+		/*margin-bottom: 20px;*/
+		width: 100%;
+		background-color: #ff9600;
+		border: none;
+	}
+	.selectul>li{
+		list-style: none;
+		display: inline-block;
+		margin-right: 10px;
+	}
+	#clicktosearch{
+		width: 100%;
+		background-color: #ff9600;
+		border: none;
+		/*margin-bottom: 10px;*/
+	}
+	/*end detail search*/
+
+
+	/*bike display*/
+	#parentdiv{
+		background-color:#fff;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 50px;
+	}
+	#allbikes{
+		width: 100%;
+
+	}
+	.bikeimg{
+		width: 100%;
+		/*height: 225px;*/
+	}
+	.bikes{
+		/*float:left;*/
+		border:1px solid #EEEEEE;
+		/*margin-right:20px;*/
+		margin-top:10px;
+	}
+	.bikeprice{
+		color: #fff;
+		background-color: #000;
+		filter:alpha(opacity=50);  /* ie 有效*/
+		-moz-opacity:0.5; /* Firefox  有效*/
+		opacity: 0.5; /* 通用，其他浏览器  有效*/
+		font-size: 14px;
+		position: absolute;
+		float: left;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-top: -40px;
+		letter-spacing:1px; 
+		/*z-index: 10;*/
+	}
+	.daypricelabel{
+		font-size: 25px;
+		font-weight: 400;
+	}
+	.bikename{
+		font-size: 14px;
+		color: #484848;
+		margin-left: 5px;
+		margin-top: 5px;
+		margin-bottom: 0px;
+		/*padding-bottom: 0px;*/
+		/*border: 1px solid blue;*/
+	}
+	.bikesubtitle{
+		font-size: 12px;
+		color: #bbb;
+		margin-top: 0px;
+		margin-left: 5px;
+		padding-top: 0px;
+	}
+	a.bikelink{
+		text-decoration: none;
+	}
+
+	div.bikes:hover{
+		border: 1px solid #ff9600;
+	}
+	p.bikename:hover,p.bikesubtitle:hover{
+		color: #ff9600;
+	}
+	/*end bike display*/
+
+
+	/*地图区不显示*/
+	#maparea{
+		display: none;
+	}
+	/*.getmorediv{
+		padding-left: 5px;
+		padding-right: 5px;
+	}*/
+	.getmore
+	{
+		width: 100%;
+		height: 40px;
+		margin-bottom: 70px;
+		margin-top: 5px;
+		border: none;
+		background-color: #ff9600;
+		font-size: 14px;
+		color: #000;
+		/*position: fixed;*/
+		bottom: 0;
+		left: 0;
+	}
+
+	/*small 屏登录框*/
+	/*大屏登录框*/
+	/*背景*/
+	#div1 {
+	 display: none;
+	 position: fixed;
+	 top: 0;
+	 left: 0;
+	 height: 100%;
+	 width: 100%;
+	 background-color: #000;
+	 z-index: 1000;
+	}
+	
+	#div2{
+	  display: none;
+	  position: fixed;
+	  z-index: 1001;
+	  height: 380px;
+	  width: 360px;
+	  left: 50%;
+	  margin-left: -180px;
+	  top: 40px;
+	  /*z-index: 100;*/
+	  /*background-color: #;*/
+	}
+
+	#logintext
+	{
+	  position: absolute;
+	  height: 60px;
+	  width: 100%;
+	  font-size: 18px;
+	  background-color: #FF9600;
+	  color: #000;
+	  z-index: 1000;
+	}
+	#loginhead{
+	  margin-top: 18px;
+	  margin-left: 170px;
+	}
+
+	#closeit{ 
+	 border:0;
+	 width:40px;
+	 position:relative;
+	 float: right;
+	 font-size:40px;
+	 background-color:#FF9600;
+	 height: 58px;
+	}
+
+	#setopacitydiv{
+	  width: 100%;
+	  height: 400px;
+	  background-color:#efefef;
+	  alpha(opacity=90);
+	  opacity: 0.9;
+	  z-index: 100;
+	}
+	/*距离登录框顶部60px*/
+	#loginframe{
+	  width: 100%;
+	  position: absolute;
+	  top: 60px;
+	  padding-left: 60px;
+	  padding-right: 60px;
+	}
+	.loginitemphone{
+	  margin-top: 20px;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+	.loginitempw{
+	  margin-top: 10px;
+	}
+	.loginitemvcode{
+	  margin-top: 10px;
+	}
+	.loginitemimg{
+	   position:absolute;
+	   margin-top:10px;
+	   margin-left:10px;
+	}
+	#tell,#password,#subLogin,#subregist
+	{
+	  width: 100%;
+	  height: 40px;
+	  background-color: #fff;
+	  outline-color: #ff9600;
+	  border: none;
+	}
+	#tell,#password,#vcode{
+	  margin-left: auto;
+	  margin-right: auto;
+	  padding-left: 40px;
+	}
+	#vcode
+	{
+	  width: 165px;
+	  height: 40px;
+	  border: none;
+	  outline-color: #ff9600;
+	}
+	#createcode{
+	  width: 70px;
+	  height: 40px;
+	  vertical-align: top;
+	}
+
+	#chkRememberPass{
+	  margin-top: 10px;
+	  margin-bottom: 0;
+	}
+	#chkrmpwlabel{
+	  float: left;
+	  font-weight: 14px;
+	  font-weight: 400;
+	  color: #484848;
+	  margin-top: 10px;
+	}
+	label#chkrmpwlabel:hover{
+	  color: #ff9600;
+	  text-decoration: none;
+	  cursor: pointer;
+	}
+
+	.findpwa{
+	  color: #484848;
+	  cursor: pointer;
+	  margin-top: 20px;
+	  float: right;
+	  font-weight: 400;
+	}
+	a.findpwa:hover{
+	  text-decoration: none;
+	   color:#ff9600;
+	}
+	#subLogin{
+	  margin-top: 10px;
+	  background-color: #ff9600;
+	  border: none;
+	}
+	#subregist{
+	  background-color: #fff;
+	}
+	#regisbtndiv{
+	  margin-top: 10px;
+	  margin-bottom: 20px;
+	}
+	/*end 大屏登陆框*/
+	  /*end 小屏登陆框*/
+
+}
+
+
+@media screen and (min-width: 768px){
+	*{
+		font-family: "微软雅黑";
+	}
+	body
+	{
+	  border: 0;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	}
+
+	/*big navbar*/
+	  #header
+	    {
+	        width:100%;
+	        height:60px;
+	        font-size: 15px;
+	        border:0px;
+	        margin:0px;
+	        padding:0px;
+	        background:#FF9600;
+	        float: top;
+	    }
+
+	    #logo
+	    {
+			  margin-top:12px;
+	      margin-left: 100px;
+	    }
+	    img#logo:hover{
+	    	cursor: pointer;
+	    }
+	    #logosmall{
+	      display: none;
+	    }
+
+	    #login
+	    {
+	         border:0px;
+	        background: #FF9600;
+	        line-height: 50px;
+	        margin-top:5px;
+
+	        font-size: 14px;
+	        color: #000;
+
+	        float: right;
+	        margin-right: 20px;
+	        padding-right: 0px;
+	    }
+
+	    #regist
+	    {
+	      border:0px;
+	      background: #FF9600;
+	      line-height: 50px;
+	      margin-top:5px;
+
+	      font-family: "微软雅黑";
+	      font-size: 14px;
+	      color: #000;
+
+	      float: right;
+	      margin-right: 20px;
+	      padding-left: 0px;
+	      padding-right: 0px;
+	    }
+
+	    #submit
+	    {
+	      width: 90px;
+	      height: 30px;
+	      border: 1px solid #000;
+
+	      font-size: 14px;
+	      color: #000;
+
+	      /*line-height: 40px;*/
+	      background: #FF9600;
+	      float: right;
+	      margin-top:15px;
+	      margin-right: 100px;
+	    }
+
+	    #selfcenter
+	    {
+	        border:0px;
+	        background: #FF9600;
+	        /*line-height: 50px;*/
+	        margin-top:20px;
+	        font-size: 14px;
+	        color: #000;
+	        float: right;
+	        margin-right: 20px
+	    }
+	    #logout
+	    {
+	        border:0px;
+	        background: #FF9600;
+	        line-height: 50px;
+	        font-size: 20px;
+	        float: right;
+	        margin-top:5px;
+	        margin-right:25px;
+	    }
+	    /*end big navbar*/
+
+	    /*大屏登录框*/
+
+	 
+	 /*大屏登录框*/
+	 /*背景*/
+	 #div1 {
+	  display: none;
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  height: 100%;
+	  width: 100%;
+	  background-color: #000;
+	  z-index: 1000;
+	 }
+	 
+	 #div2{
+	   display: none;
+	   position: fixed;
+	   z-index: 1001;
+	   height: 380px;
+	   width: 360px;
+	   left: 50%;
+	   margin-left: -180px;
+	   top: 140px;
+	   /*z-index: 100;*/
+	   /*background-color: #;*/
+	 }
+
+	 #logintext
+	 {
+	   position: absolute;
+	   height: 60px;
+	   width: 100%;
+	   font-size: 18px;
+	   background-color: #FF9600;
+	   color: #000;
+	   z-index: 1000;
+	 }
+	 #loginhead{
+	   margin-top: 18px;
+	   margin-left: 170px;
+	 }
+
+	 #closeit{ 
+	  border:0;
+	  width:40px;
+	  position:relative;
+	  float: right;
+	  font-size:40px;
+	  background-color:#FF9600;
+	  height: 58px;
+	 }
+
+	 #setopacitydiv{
+	   width: 100%;
+	   height: 400px;
+	   background-color:#efefef;
+	   alpha(opacity=90);
+	   opacity: 0.9;
+	   z-index: 100;
+	 }
+	 /*距离登录框顶部60px*/
+	 #loginframe{
+	   width: 100%;
+	   position: absolute;
+	   top: 60px;
+	   padding-left: 60px;
+	   padding-right: 60px;
+	 }
+	 .loginitemphone{
+	   margin-top: 20px;
+	   margin-left: auto;
+	   margin-right: auto;
+	 }
+	 .loginitempw{
+	   margin-top: 10px;
+	 }
+	 .loginitemvcode{
+	   margin-top: 10px;
+	 }
+	 .loginitemimg{
+	    position:absolute;
+	    margin-top:10px;
+	    margin-left:10px;
+	 }
+	 #tell,#password,#subLogin,#subregist
+	 {
+	   width: 100%;
+	   height: 40px;
+	   background-color: #fff;
+	   outline-color: #ff9600;
+	   border: none;
+	 }
+	 #tell,#password,#vcode{
+	   margin-left: auto;
+	   margin-right: auto;
+	   padding-left: 40px;
+	 }
+	 #vcode
+	 {
+	   width: 165px;
+	   height: 40px;
+	   border: none;
+	   outline-color: #ff9600;
+	 }
+	 #createcode{
+	   width: 70px;
+	   height: 40px;
+	   vertical-align: top;
+	 }
+
+	 #chkRememberPass{
+	   margin-top: 10px;
+	   margin-bottom: 0;
+	 }
+	 #chkrmpwlabel{
+	   float: left;
+	   font-weight: 14px;
+	   font-weight: 400;
+	   color: #484848;
+	   margin-top: 10px;
+	 }
+	 label#chkrmpwlabel:hover{
+	   color: #ff9600;
+	   text-decoration: none;
+	   cursor: pointer;
+	 }
+
+	 .findpwa{
+	   color: #484848;
+	   cursor: pointer;
+	   margin-top: 20px;
+	   float: right;
+	   font-weight: 400;
+	 }
+	 a.findpwa:hover{
+	   text-decoration: none;
+	    color:#ff9600;
+	 }
+	 #subLogin{
+	   margin-top: 10px;
+	   background-color: #ff9600;
+	   border: none;
+	 }
+	 #subregist{
+	   background-color: #fff;
+	 }
+	 #regisbtndiv{
+	   margin-top: 10px;
+	   margin-bottom: 20px;
+	 }
+	 /*end 大屏登陆框*/
+
+	.getmorediv{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.getmore
+	{
+		width: 100%;
+		height: 40px;
+		margin-bottom: 70px;
+		margin-top: 5px;
+		border: none;
+		background-color: #ff9600;
+		font-size: 14px;
+		color: #000;
+		/*position: fixed;*/
+		bottom: 0;
+		left: 0;
+	}
+
+    #mainblock
+    {
+    	width: 100%;
+    	height: 100%;
+    	margin: auto;
+    	margin-left: 0px;
+
+    }
+
+
+    #starttime{
+    	height: 30px;
+/*    	width: 320px;
+    	position: relative;
+    	left: 50%;
+    	margin-left: -330px;
+*/    }
+ 
+
+    #spreaddetailsearch{
+    	height: 40px;
+    	width: 100%;
+    	background-color: #ff9600;
+    	color: #000;
+    	border: none;
+    	/*margin-left: 20px;*/
+    	/*margin-right: 50px;*/
+    }
+
+    #collapseExample{
+    	padding-left: 20px;
+    	padding-right: 20px;
+    	/*margin-top: 20px;*/
+    	/*margin-top: -10px;*/
+/*    	position: relative;
+    	left: 50%;
+    	margin-left: -190px;
+*/    }
+	#collapseExample>label{
+		color: #bbb;
+		font-size: 14px;
+		font-weight: 400;
+	}
+	.searchdetaillabel{
+		
+		color: #bbb;
+		font-size: 14px;
+		font-weight: 400;
+	}
+	.selectul{
+		padding-left: 0px;
+		margin-bottom: 0px;
+	}
+
+
+    .selectul>li{
+    	list-style: none;
+    	display: inline-block;
+    }
+
+    #fitheight{
+    	width: 100%;
+    	height: 30px;
+    	border: none;
+    	outline-color: #ff9600;
+    	padding-left: 10px;
+    }
+
+    #price{
+    	width: 100%;
+    	height: 30px;
+    	border: none;
+    	outline-color: #ff9600;
+    	padding-left: 10px;
+    }
+
+    #clicktosearch{
+    	background-color:#FF9600;
+    	height: 40px;
+    	width: 100%;
+    	border: none;
+    	color: #000;
+    }
+
+    #leftblock
+    {
+    	overflow-y: scroll;
+    	overflow-x: hidden;
+		width: 55%;
+		height: 100%;
+		float: left;
+		padding:0px;
+		/*border: 3px solid blue;*/
+    }
+
+    #maparea
+    {	
+         border: 5px solid #FFFFFF;
+         width: 45%;
+    }
+	
+
+
+	#searchbar
+	{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		/*padding-left: 20px;*/
+		width: 100%;
+		background-color: #EEEEEE;
+		margin-left:0px;
+		filter:alpha(opacity=90); 
+		-moz-opacity:0.9; 
+		opacity:0.9;
+	}
+	.searchlocation1{
+		padding-left:20px;
+		padding-right:20px;
+		/*margin-bottom: 20px;*/
+		/*border:1px solid blue;*/
+	}
+	.searchdivcity{
+		display:inline-block;
+		width:49.5%;
+		padding-right:10px;
+		/*border: 1px solid blue;*/
+		/*margin-left: 20px;*/
+		/*width: 50%;*/
+		/*display: inline-block;*/
+	}
+	#citylabel,#schoollabel{
+		color: #bbb;
+		font-size: 14px;
+		font-weight: 400;
+	}
+	.citylist{
+		width: 100%;
+		height: 30px;
+		border: none;
+		outline-color: #ff9600;
+		padding-left: 10px;
+	}
+
+	.searchdivschool{
+		display:inline-block;
+		width:49.5%;
+		padding-left:10px;
+	}
+	.schoollist{
+		width:100%;
+		height: 30px;
+		border: none;
+		outline-color: #ff9600;
+		padding-left: 10px;
+	}
+
+	.searchfetchtimediv{
+		display: inline-block;
+		width: 49.5%;
+		padding-right: 10px;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+	.searchreturntimediv{
+		display: inline-block;
+		width: 49.5%;
+		padding-left: 10px;		
+	}
+	#starttimelabel{
+		color: #bbb;
+		font-size: 14px;
+		font-weight: 400;
+	}
+	#endtimelabel{
+		color: #bbb;
+		font-size: 14px;
+		font-weight: 400;		
+	}
+	#starttime,#endtime{
+		height: 30px;
+		width: 100%;
+		border: none;
+		outline-color: #ff9600;
+		padding-left:10px;
+	}
+	.selectitemheightdiv{
+		width:49.5%;
+		display:inline-block;
+		padding-right:10px;
+		margin-bottom:10px;
+	}
+	.selectitempricediv{
+		width:49.5%;
+		display:inline-block;
+		padding-left:10px;
+	}
+
+
+	/*end leftblock*/
+
+	#allbikes
+	{
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-top: 5px;
+		padding-bottom: 30px;
+    	/*overflow-y: scroll;*/
+    	/*overflow-x: hidden;*/
+		/*margin-left: 14px;*/
+		/*margin-top: 20px;*/
+	}
+	.parentdiv{
+		padding-bottom: 70px;
+	}
+	.bikes
+	{
+		width: 50%;
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-top: 5px;
+		border: 1px solid #fff;
+		position: relative;
+		display: inline-block;
+	}
+	.bikeimg
+	{
+		/*border:1px solid #ff9600;*/
+		width: 100%;
+		/*height: 225px;*/
+	}
+	.bikeprice{
+		color: #fff;
+		background-color: #000;
+		filter:alpha(opacity=50);  /* ie 有效*/
+		-moz-opacity:0.5; /* Firefox  有效*/
+		opacity: 0.5; /* 通用，其他浏览器  有效*/
+		font-size: 14px;
+		position: absolute;
+		float: left;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-top: -40px;
+		letter-spacing:1px; 
+		/*z-index: 10;*/
+	}
+	.daypricelabel{
+		font-size: 25px;
+		font-weight: 400;
+	}
+	.bikename{
+		font-size: 14px;
+		color: #484848;
+		margin-top: 5px;
+		margin-bottom: 0px;
+		/*padding-bottom: 0px;*/
+		/*border: 1px solid blue;*/
+	}
+	.bikesubtitle{
+		font-size: 12px;
+		color: #bbb;
+		margin-top: 0px;
+		padding-top: 0px;
+	}
+	a.bikelink{
+		text-decoration: none;
+	}
+
+	div.bikes:hover{
+		border: 1px solid #ff9600;
+	}
+	p.bikename:hover,p.bikesubtitle:hover{
+		color: #ff9600;
+	}
+
+}
+

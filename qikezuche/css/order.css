@@ -1,0 +1,811 @@
+@media screen  and (max-width: 768px){
+*{
+  font-family:"Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu;
+}
+body{
+  padding: 0px;
+  margin: 0px;
+}
+/*small navbar*/
+#header
+  {
+      width:100%;
+      height:50px;
+      font-size: 14px;
+      border:0px;
+      margin:0px;
+      padding:0px;
+      background:#FF9600;
+      float: top;
+  }
+
+  #logo
+  {
+    display: none;
+  }
+  #logosmall{
+    margin-left: 10px;
+    margin-top: 8px;      
+  }
+
+  #submit
+  { 
+      border-width: 1px;
+      border-color: #000;
+      font-size: 14px;
+      /*line-height: 35px;*/
+      background: #FF9600;
+      float: right;
+      margin-top: 12px;
+      margin-right: 10px;
+      margin-left: 13px;
+  }
+
+  #login
+  {
+      border:0px;
+      background: #FF9600;
+      /*line-height: 35px;*/
+      font-size: 14px;
+      float: right;
+      margin-top: 12px;
+      /*margin-right:20px;*/
+  }
+
+  #regist
+  {
+      border:0px;
+      background: #FF9600;
+      /*line-height: 35px;*/
+      font-size: 14px;
+      margin-top: 12px;
+      float: right;
+      margin-left: 7px;
+      /*margin-right: 5px;*/
+  }
+  #selfcenter
+  {
+      border:0px;
+      background: #FF9600;
+      line-height: 35px;
+      margin-top: 7px;
+      font-size: 12px;
+      float: right;
+  }
+  #logout
+  {
+      border:0px;
+      background: #FF9600;
+      line-height: 35px;
+      font-size: 20px;
+      float: right;
+      margin-top: 7px;
+      margin-right:20px;
+  }
+  /*end small navbar*/
+
+  ul{
+    display: inline-block;
+    list-style: none;
+    list-style-type: none;
+  }
+
+
+
+    #mainer
+    {
+      /*width: 100%;*/
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    #conditioninfo
+    {
+      padding-top: 10px;
+    }
+    #processimg{
+      width: 100%;
+    } 
+
+    #orderinfo
+    {
+      margin-top: 10px;
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      background-color: #EEEEEE;
+    } 
+    #orderinfoimg{
+      margin-left: 10px;
+    }
+    #order_msg
+    {
+      color: #ff9600;
+    }
+
+    #segmentationdiv{
+       border-top:1px solid #ff9600;
+       margin-top:10px;
+    }
+   
+    #bikeimg
+    {
+      margin-top: 10px;
+      width: 100%;
+    }
+        #order_msg{
+          padding-top: 0px;
+          font-size: 14px;
+          color: #ff9600;
+        }
+
+    #ordermsg
+    {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding-top: 0px;
+      padding-left: 0px;
+  }
+        .orderulli{
+          margin-top: 10px;
+          font-size: 14px;
+          font-weight: 400;
+          color: #484848;
+        }
+        .orderullabel{
+          margin-right: 10px;
+          font-size: 14px;
+          color: #bbb;
+        }
+        input.labelauty + label {
+          display: inline-block;
+          margin-left: -5px;
+        }
+        #rentername,#rentertell
+        {
+          width: 180px;
+          height: 30px;
+          border: none;
+          outline-color: #ff9600;
+          padding-left: 10px;
+        }
+            
+          /*small 退订规则*/
+          #orderprc
+          {
+            /*position: relative;*/
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 30px;
+            padding-top: 10px;
+            border: 2px solid #eee;
+            background-color: #ffffff;
+          }
+
+
+            #message{
+              /*display: inline-block;*/
+              /*float: left;*/
+              font-size: 14px;
+              /*margin-left: 20px;*/
+              /*margin-right: 20px;*/
+              width: 100%;
+              padding: 0px;
+              /*border: 1px solid blue;*/
+            /*margin-left: -280px;*/
+            }
+            #message>li{
+              color: #484848;
+              /*width: 600px;*/
+            }
+            #message>.tuidingguizeli{
+              color: #bbb;
+            }
+
+            #money
+            {
+              /*position: relative;*/
+              height: 80px;
+              margin-top: 0px;
+              /*margin-right: 20px;*/
+              /*width: 100%;*/
+              /*border: 2px solid blue;*/
+            }
+
+            #money>ul{
+              /*position: relative;*/
+              /*right: 0px;*/
+              /*display: inline-block;*/
+              float: right;
+              text-align: right;
+              padding: 0px;
+              font-size: 14px;
+              color: #bbb;
+            }
+            .orderhighlightspan{
+              color: #ff9600;
+              font-size: 16px;
+            }
+
+
+            #submitdiv{
+              /*border: 1px solid blue;*/
+              padding-bottom: 50px;
+            }
+            #submitorder
+            {
+              /*float:right;*/
+              width: 100%;
+              height: 40px;
+              border: none;
+              background-color: #FF9600;
+              /*margin-right: 50px;*/
+              margin-top: 20px;
+              font-size: 18px;
+              outline-color: #ff9600;
+            }
+            .submitnotice{
+              margin-top: 10px;
+              font-size: 14px;
+              color: #bbb;
+            }
+            .submitnoticespan{
+              color: #ff9600;
+              text-decoration: none;
+            }
+            .btnclick{
+              background-color: #fff;
+            }
+
+
+                /*small footer*/
+                #footerhr{
+                  display: none;
+                }
+                #footer
+                {
+                  text-align: center;
+                  padding-top: 50px;
+                  margin-bottom: 30px;
+                  /*border: 1px solid green;*/
+                }
+                #footer-1{
+                  width: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    position:relative;/*让子div相对于父div绝对定位*/
+                    /*height:75px;*/
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    /*border:1px solid yellow;*/
+                }
+                .footermanual{
+                  width:50px;
+                  display: inline-block;
+                  /*border: 1px solid blue;*/
+                }
+                #ownermanualdiv{
+                  margin-right: 40px;
+                }
+                #rentermanualdiv{
+            /*      position: relative;
+                  float: right;
+            */      /*left: 50%;      */
+                  /*margin-left: 5px;*/
+                }
+                .footermanualimg{
+                  width:50px;
+                  height:50px;
+                  margin-bottom: 10px;
+                }
+                .footermanuallink{
+                  height:10px;
+                  font-size:12px;
+                  color: #484848;
+                  text-decoration: none;
+                  /*margin-top: 20px;*/
+                }
+                a.footermanuallink:hover{
+                  color: #ff9600;
+                }
+
+                #footer-2{
+                    width:100%;
+                    position: relative;/**/
+                    /*margin-top: 50px;*/
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    /*height:70px;*/
+                    /*border: 1px solid blue;*/
+                }
+                .footer2fiv{
+                  width:60px;
+                  height:70px;
+                  display:inline-block;
+                }
+                .footer2fivfirst{
+                  margin-right: 50px;
+                }
+                .footer2fivthird{
+                  margin-left: 10px;
+                }
+                .footer2fivfourth{
+                  margin-left: 10px;
+                }
+                .footer2headlabel{
+                  display:inline-block;
+                  color:#484848;
+                  font-size:14px;
+                  font-weight:600;
+                  margin-top:0;
+                }
+                .footer2contentlink{
+                  display:inline-block;
+                  color:#484848;
+                  font-size:12px;
+                  margin-bottom: 5px;
+                  text-decoration: none;
+                }
+                .footer2fiv>a.footer2contentlink:hover{
+                  color: #ff9600;
+                }
+
+                #footer-3{
+                  /*height: 70px;*/
+                  width: 100%;
+                  display: inline-block;
+                  padding-top: 20px;
+                  padding-bottom: 20px;
+                  /*border: 1px solid blue;*/
+                }
+                .footer3contactdivfirst{
+                  float: left;
+                  width: 25%;
+                  margin-left: 25%;
+                  /*padding-right: 10px;*/
+                  display:inline-block;
+                }
+                .footer3contactdiv{
+                  float: left;
+                  width: 25%;
+                  display:inline-block;
+                  padding-left: 28px;
+                  /*margin-left: 20px;*/
+                  /*border: 1px solid blue;*/
+                }
+                .footer3contactphone{
+                  /*margin-left: -10px;*/
+                  padding-right: 19px;
+                  color:#484848;
+                  font-size:14px;
+                  font-weight:600;
+                }
+                .footer3contactemail{
+                  /*margin-left: -35px;*/
+                  padding-right: 9px;
+                  color:#484848;
+                  font-size:14px;
+                  font-weight:600;
+
+                }
+                .footer3contactcontent{
+                  color:#484848;
+                  font-size:12px;
+                }
+
+                #footer-4{
+                  /*border: 1px solid blue;*/
+                  /*margin-top: 25px;*/
+                  padding-top: 20px;
+                  padding-bottom: 20px;
+                  width: 100%;
+                  display: inline-block;
+                  margin-bottom: 20px;
+                }
+                #ScanImg{
+                  display: none;
+                }
+                /*end small footer*/
+        
+
+}
+@media screen and (min-width: 768px){
+  *{
+    font-family:"Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu;
+}
+  body{
+    padding: 0px;
+    margin: 0px;
+  }
+
+    #header
+    {
+        width:100%;
+        height:60px;
+        font-size: 15px;
+        border:0px;
+        margin:0px;
+        padding:0px;
+        background:#FF9600;
+    }
+    #logo
+    {
+      margin-top:15px;
+      margin-left: 100px;
+    }
+    #logosmall{
+      display: none;
+    }
+     #submit
+    {
+      width: 90px;
+      height: 30px;
+        border: 1px solid #000; 
+        font-size: 14px;
+        /*line-height: 40px;*/
+        background: #FF9600;
+        float: right;
+        margin-top:15px;
+        margin-right: 100px;
+    }
+    #selfcenter
+    {
+        border:none;
+        background: #FF9600;
+        line-height: 58px;
+        /*margin-top:5px;*/
+        font-size: 14px;
+        float: right;
+        margin-right: 20px
+    }
+    #self_center
+    {
+        display: none;
+    }
+    #logout
+    {
+        border:0px;
+        background: #FF9600;
+        line-height: 50px;
+        font-size: 20px;
+        float: right;
+        margin-top:5px;
+        margin-right:25px;
+    }
+    #log_out
+    {
+        display: none;
+    }
+
+    ul{
+      display: inline-block;
+      list-style: none;
+      list-style-type: none;
+    }
+
+    #mainer
+    {
+      width: 80%;
+      margin: auto;
+    }
+
+    #conditioninfo
+    {
+      /*margin-top: 20px;*/
+      margin-left: auto;
+      margin-right: auto;
+      margin: auto;
+      text-align: center;
+    }
+    #processimg{
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    #orderinfo
+    {
+      width: 100%;
+      /*height: 450px;*/
+      background-color: #EEEEEE;
+      padding-top: 20px;
+      /*padding-bottom: 20px;*/
+    }
+    #orderinfoimg{
+      margin-left: 20px;
+    }
+
+    #order_msg{
+      padding-top: 0px;
+      font-size: 14px;
+      color: #ff9600;
+    }
+    #ordermsg
+    {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding-top: 0px;
+      padding-left: 20px;
+      /*border-top: 1px solid #ff9600;*/
+/*      margin-left: 30px;
+      line-height: 40px;
+*/    }
+    .orderulli{
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 400;
+      color: #484848;
+    }
+    .orderullabel{
+      margin-right: 10px;
+      font-size: 14px;
+      color: #bbb;
+    }
+    .chooseequ{
+      /*line-height: 80px;*/
+
+    }
+    input.labelauty + label {
+      display: inline-block;
+      margin-left: -5px;
+      margin-right: 10px;
+    }
+    #rentername,#rentertell
+    {
+      width: 180px;
+      height: 30px;
+      border: none;
+      outline-color: #ff9600;
+      padding-left: 10px;
+    }
+
+    #segmentationdiv{
+       border-top:1px solid #ff9600;
+       margin-top:10px;
+       margin-left: 10px;
+       margin-right: 10px;
+    }
+
+    #bikeimg
+    {
+      float: right;
+      margin-right: 20px;
+      margin-top: 10px;
+      width: 335px;
+      /*height: 300px;*/
+    }
+
+    /*big 退订规则*/
+    #orderprc
+    {
+      margin: 0;
+      padding: 0px;
+      /*height: 180px;*/
+      padding-bottom: 10px;
+      border: 2px solid #eee;
+      background-color: #ffffff;
+      /*text-align: left;*/
+      text-indent: 0px;
+    }
+    
+
+
+    #message{
+      /*display: inline-block;*/
+      /*float: left;*/
+      font-size: 14px;
+      margin-left: 20px;
+      padding: 0px;
+    /*margin-left: -280px;*/
+    }
+    #message>li{
+      color: #484848;
+      width: 600px;
+    }
+    #message>.tuidingguizeli{
+      color: #bbb;
+    }
+
+    #money
+    {
+      /*display: inline-block;*/
+      /*position: relative;*/
+      float: right;
+      /*margin-top: 20px;*/
+      margin-right: 20px;
+    }
+    #money>ul{
+      text-align: right;
+      padding: 0px;
+      font-size: 14px;
+      color: #bbb;
+    }
+    #money>ul>li{
+    }
+    .orderhighlightspan{
+      color: #ff9600;
+      font-size: 16px;
+    }
+    #sudiv{
+       overflow:hidden;
+    }
+    #submitdiv{
+      display: inline-block;
+      float: right;
+      width: 240px;
+    }
+    #submitorder
+    {
+      /*float:right;*/
+      width: 240px;
+      height: 40px;
+      border: none;
+      background-color: #FF9600;
+      /*margin-right: 50px;*/
+      margin-top: 20px;
+      font-size: 18px;
+      outline-color: #ff9600;
+    }
+/*    #submitorder:clicked{
+
+    }
+*/    /*//#submitorder:onmousedown{}*/
+    .submitnotice{
+      margin-top: 10px;
+      font-size: 14px;
+      color: #bbb;
+    }
+    .submitnoticespan{
+      color: #ff9600;
+      text-decoration: none;
+    }
+    .submitnoticespan:hover{
+      text-decoration: underline;
+    }
+    .btnclick{
+      background-color: #fff;
+    }
+
+    /*big footer*/
+    #footerhr{
+       border-top:1px solid #eee;
+       width:1080px;
+       margin:40px auto 0 auto;
+    }
+    #footer
+    {
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 60px;
+      margin-bottom: 60px;
+    }
+    #footer-1{
+        /*width:33.2%;*/
+        position:relative;/*让子div相对于父div绝对定位*/
+        height:70px;
+        /*width:340px;*/
+        float:left;
+    }
+    .footermanual{
+      width:50px;
+      /*height:60px;*/
+      display: inline-block;
+      margin-right: 40px;
+      /*border: 1px solid blue;*/
+    }
+    #ownermanualdiv{
+      position: relative;
+      float: right;
+      margin-right: 60px;
+      /*left: 50%;*/
+      /*margin-left: -55px;*/
+    }
+    #rentermanualdiv{
+      position: relative;
+      float: right;
+      /*left: 50%;      */
+      /*margin-left: 5px;*/
+    }
+    .footermanualimg{
+      width:50px;
+      height:50px;
+      margin-bottom: 10px;
+    }
+    .footermanuallink{
+      height:10px;
+      font-size:12px;
+      color: #484848;
+      text-decoration: none;
+      /*margin-top: 20px;*/
+    }
+    a.footermanuallink:hover{
+      color: #ff9600;
+    }
+
+    #footer-2{
+        width:190px;
+        position: relative;/**/
+        float:left;
+        height:70px;
+        /*border: 1px solid blue;*/
+    }
+    .footer2fiv{
+      width:60px;
+      height:70px;
+      display:inline-block;
+    }
+    .footer2fivfirst{
+      margin-right: 30px;
+    }
+    .footer2fivthird{
+      margin-left: 10px;
+    }
+    .footer2fivfourth{
+      margin-left: 10px;
+    }
+    .footer2headlabel{
+      display:inline-block;
+      color:#484848;
+      font-size:14px;
+      font-weight:600;
+      margin-top:0;
+    }
+    .footer2contentlink{
+      display:inline-block;
+      color:#484848;
+      font-size:12px;
+      margin-bottom: 5px;
+      text-decoration: none;
+    }
+    .footer2fiv>a.footer2contentlink:hover{
+      color: #ff9600;
+    }
+
+    #footer-3{
+      height: 70px;
+      display: inline-block;
+      float:left;
+      padding-left: 20px;
+    }
+    .footer3contactdiv{
+      display:inline-block;
+    }
+    .footer3contactdivfirst{
+      display:inline-block;
+      margin-right: 30px;
+      margin-left: 10px;
+    }
+    .footer3contactphone{
+      margin-left: -30px;
+      color:#484848;
+      font-size:14px;
+      font-weight:600;
+    }
+    .footer3contactemail{
+      margin-left: -60px;
+      color:#484848;
+      font-size:14px;
+      font-weight:600;
+
+    }
+    .footer3contactcontent{
+      color:#484848;
+      font-size:12px;
+    }
+
+    #footer-4{
+      position: relative;
+      display: inline-block;
+      /*width: 340px;*/
+      height: 70px;
+      float: left;
+    }
+    #ScanImg{
+      margin-left: 60px;
+      float:left;
+    }
+    #ScanImgSmall{
+      display: none;
+    }
+    /*end big footer*/
+
+   
+}
