@@ -1,0 +1,40 @@
+C:\Users\JackPaul\Desktop\北邮计算机网络选择重传\选择重传\选择重传程序\datalink.exe a 
+=========================================================================
+                          Station A                                 
+-------------------------------------------------------------------------
+Protocol.lib, version 3.0, Build: Oct 19 2009 (jiangy@public3.bta.net.cn)
+Channel: 8000 bps, 270 ms propagation delay, bit error rate 1.0E-005
+Log file "C:\Users\JackPaul\Desktop\北邮计算机网络选择重传\选择重传\选择重传程序\datalink-A.log", TCP port 59144, debug mask 0x00
+Station A is waiting for station B on TCP port 59144 ... Done.
+New epoch: Sat May 16 20:06:27 2015
+=========================================================================
+3.421 .... 3 packets received, 2875 bps, 35.94%, Err 1 (5.3e-005)
+5.536 .... 15 packets received, 7225 bps, 90.31%, Err 1 (2.8e-005)
+7.651 .... 23 packets received, 7398 bps, 92.48%, Err 1 (1.9e-005)
+9.781 .... 31 packets received, 7472 bps, 93.40%, Err 1 (1.4e-005)
+11.881 .... 39 packets received, 7537 bps, 94.22%, Err 1 (1.2e-005)
+13.996 .... 47 packets received, 7572 bps, 94.65%, Err 1 (9.7e-006)
+16.097 .... 55 packets received, 7604 bps, 95.05%, Err 1 (8.3e-006)
+18.227 .... 63 packets received, 7615 bps, 95.19%, Err 1 (7.3e-006)
+20.342 .... 71 packets received, 7630 bps, 95.37%, Err 2 (1.3e-005)
+22.457 .... 78 packets received, 7545 bps, 94.31%, Err 2 (1.2e-005)
+24.572 .... 86 packets received, 7563 bps, 94.54%, Err 2 (1.1e-005)
+26.687 .... 94 packets received, 7578 bps, 94.73%, Err 2 (9.8e-006)
+28.802 .... 102 packets received, 7591 bps, 94.89%, Err 2 (9.0e-006)
+30.918 .... 110 packets received, 7602 bps, 95.03%, Err 2 (8.4e-006)
+33.034 .... 118 packets received, 7611 bps, 95.14%, Err 3 (1.2e-005)
+35.134 .... 126 packets received, 7623 bps, 95.29%, Err 3 (1.1e-005)
+37.249 .... 134 packets received, 7631 bps, 95.38%, Err 3 (1.0e-005)
+39.364 .... 142 packets received, 7637 bps, 95.46%, Err 4 (1.3e-005)
+41.479 .... 150 packets received, 7643 bps, 95.53%, Err 4 (1.2e-005)
+43.594 .... 158 packets received, 7648 bps, 95.60%, Err 4 (1.2e-005)
+45.694 .... 166 packets received, 7655 bps, 95.69%, Err 4 (1.1e-005)
+47.824 .... 174 packets received, 7657 bps, 95.71%, Err 4 (1.1e-005)
+49.925 .... 182 packets received, 7663 bps, 95.79%, Err 4 (1.0e-005)
+52.041 .... 190 packets received, 7666 bps, 95.83%, Err 4 (9.8e-006)
+54.156 .... 198 packets received, 7670 bps, 95.87%, Err 4 (9.4e-006)
+56.271 .... 206 packets received, 7673 bps, 95.91%, Err 4 (9.1e-006)
+58.371 .... 213 packets received, 7641 bps, 95.52%, Err 5 (1.1e-005)
+60.486 .... 221 packets received, 7645 bps, 95.56%, Err 5 (1.1e-005)
+62.601 .... 229 packets received, 7649 bps, 95.61%, Err 5 (1.0e-005)
+64.716 .... 237 packets received, 7652 bps, 95.65%, Err 5 (9.8e-006)

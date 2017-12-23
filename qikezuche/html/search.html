@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>搜索页</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-labelauty.css">
+	<link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+  	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  	<script src="../js/bootstrap.min.js"></script>
+ 	<link rel="stylesheet" type="text/css" href="../datetimepicker/bootstrap-datetimepicker.min.css">
+ 	<link rel="stylesheet" type="text/css" href="../css/search.css">
+	<script type="text/javascript" src="../datetimepicker/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="../datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=YOOj78k6VSa1CzmQXrKS9gUm"></script>
+</head>
+
+
+<body>
+	<div id="header">
+        <a href="../index.php"><img id="logosmall" src="../image/logosmall.png"></a>
+        <img id="logo" src="../image/logo.png" onclick="window.location.href='../index.php'">
+        <?php
+        if($name=='')
+        {
+        echo <<<EOT
+        <button id="submit" onclick="click1();" >发布车辆</button>
+        <button id="regist" onclick="window.location.href='../html/regist.html';">注册</button>
+        <button id="login" onclick="openme();">登录</button>
+EOT;
+        }
+        else
+        {
+
+        echo '<button id="submit" onclick="click1();" >发布车辆</button> ';
+        echo "<button id='selfcenter' onclick='click3();'>欢迎,".$name."</button>";
+        }
+
+        ?>
+	</div>
+
+
+
+
+
+
+	<div id="div1"></div>
+	<div id="div2">
+	  <div id="logintext">
+	    <label id="loginhead">登录</label>
+	    <button id="closeit" onclick="closeme();">&times;</button>
+	  </div>
+
+	  <div id="setopacitydiv"></div>
+
+	  <div id="loginframe">
+	    <div class="loginitemphone">
+	      <img class="loginitemimg" src="../image/loginhead.png">
+	      <!-- <div style="display:inline-block"> -->
+	        <input type="text" id="tell"  name="tell" placeholder="请输入手机号"/>
+	      <!-- </div> -->
+	    </div>
+
+	    <div class="loginitempw">
+	      <img class="loginitemimg" src="../image/loginpw.png">
+	      <input type="password" id="password" name="password" placeholder="请输入密码"/>
+	    </div>
+
+	    <div class="loginitemvcode">
+	      <img class="loginitemimg" src="../image/loginvcode.png">
+	      <input input type="text" id="vcode" value="" placeholder="请输入验证码"/>
+	      <img id="createcode" src="../vcode/vcode.php" onclick="chv(this);"/>
+	    </div>
+
+	    <div>
+	      <label id="chkrmpwlabel">
+	      <input type="checkbox" id="chkRememberPass" name="chkRememberPass" data-labelauty="记住密码"/>
+	      </label>
+	      <a class="findpwa" href="findpassword.html">忘记密码？</a>
+	    </div>
+
+	    <div>
+	      <input type="button" id="subLogin" name="subLogin"value="登 录" onclick="userLogin()"/>
+	    </div>
+
+	    <div id="regisbtndiv">
+	      <input type="button" id="subregist"  value="没有账号，点击注册" onclick=" window.location.href='./regist.html' ;"/>
+	    </div>
+
+	  </div>
+	</div>
+
+
+<div id="mainblock">
+	<div id="leftblock" >
+		<div id="searchbar">
+		<div id="searchlocation1" class="searchlocation1" style="">
+			<div class="searchdivcity">
+				<label for="citylist" id="citylabel">城市</label>
+				<select id="citylist" class="citylist">
+					<option value="北京市" >北京市</option>
+				</select>
+			</div>
+			<div class="searchdivschool">
+				<label for="citylist" id="schoollabel">学校</label>
+				<select id="schoollist" class="schoollist" onchange="changemap();">
+		<option value ="全部">全部</option>
+					<option value ="北京邮电大学(海淀校区)">北京邮电大学(海淀校区)</option>
+			<option value ="北京师范大学">北京师范大学</option>
+			<option value ="通州区经济社会发展研究基地">北京工业大学(实验学院)</option>
+			<option value ="中央财经大学">中央财经大学</option>
+			<option value ="中国农业大学">中国农业大学</option>
+			<option value ="北京交通大学">北京交通大学</option>
+			<option value ="北京航空航天大学">北京航空航天大学</option>
+			<option value ="中央财经大学">中央财经大学</option>
+			<option value ="北京理工大学">北京理工大学</option>
+			<option value ="中国人民大学">中国人民大学</option>
+			<option value ="北京科技大学">北京科技大学</option>
+			<option value ="北京外国语大学">北京外国语大学</option>
+			<option value ="中央民族大学">中央民族大学</option>
+			<option value ="北京大学">北京大学</option>
+			<option value ="清华大学">清华大学</option>
+			<option value ="北京语言大学">北京语言大学</option>
+			<option value ="北京林业大学">北京林业大学</option>
+			<option value ="中国地质大学">中国地质大学</option>
+			<option value ="北京体育大学">北京体育大学</option>
+			<option value ="中国矿业大学">中国矿业大学</option>
+			<option value ="中国农业大学">中国农业大学</option>
+			<option value ="北京电影学院">北京电影学院</option>
+			<option value ="中国政法大学">中国政法大学</option>
+   <option value ="北京工业大学">北京工业大学</option>
+				</select>
+			</div>
+
+			<div id="searchfetchtimediv" class="searchfetchtimediv">
+				<label for=""  id="starttimelabel">取车时间</label>
+				<input type="text" class="form_date" placeholder="取车时间" id="starttime" name="starttime" readonly />
+			</div>
+			<!-- <div></div> -->
+			<div id="searchreturntimediv" class="searchreturntimediv">
+				<label for="" id="endtimelabel">还车时间</label>
+				<input type="text" class="form_date" placeholder="还车时间" id="endtime" name="endtime" onchange="changemap();" readonly />
+			</div>
+
+			<div id="spreadsearchdetaildiv" class="spreadsearchdetaildiv">
+				<button id="spreaddetailsearch" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" onclick="this.style.display = 'none'">
+				  展开筛选条件
+				</button>
+			</div>
+
+		</div>
+
+			<div class="collapse" id="collapseExample">
+			    <label >单车类型：</label>
+			    <ul class="selectul">
+			    	 <li>
+				    <input type="radio" name="biketype" value="全部" class="biketype" checked="checked" data-labelauty="全部" style="display:inline-block"/>
+				    </li>
+				    <li>
+				    <input type="radio" name="biketype" value="山地车" class="biketype"  data-labelauty="山地车" />
+				    </li>
+				    <li>
+				    <input type="radio" name="biketype" value="公路车" class="biketype" data-labelauty="公路车" />
+				    </li>
+				    <li>
+				    <input type="radio" name="biketype" value="死飞" class="biketype" data-labelauty="死飞"/>
+				    </li>
+				    <li>
+				    <input type="radio" name="biketype" value="折叠车" class="biketype" data-labelauty="折叠车">
+				    </li>
+				    <li>
+				    <input type="radio" name="biketype" value="其他" data-labelauty="其他">
+				    </li>
+			    </ul>
+
+			    <div class="selectitemheightdiv">
+				    <label class="bikesearch searchdetaillabel" >适合身高(cm)</label><select id="fitheight"><option value="全部">全部</option><option value="155以下">155以下</option><option value="155-165">155-165</option><option value="165-175">165-175</option><option value="175-185">175-185</option><option value="185以上">185以上</option></select>
+
+			    </div>
+			    <div class="selectitempricediv">
+				    <label class="searchdetaillabel">
+				       每日价格(元)</label><select id="price"><option value="全部">全部</option><option value="0-15">0-15</option><option value="15-30">15-30</option><option value="30-45">30-45</option><option value="45以上">45以上</option></select>
+
+			    </div>
+			    <br>
+			    <label class="bikesearch" >学生租客是否免押金：</label>
+			    <ul class="selectul">
+			    	<li>
+				    <input type="radio" name="isfree" value="全部" class="isfree" checked="checked" data-labelauty="全部">
+				    </li>
+				    <li>
+				    <input type="radio" name="isfree" value="是" class="isfree"  data-labelauty="是">
+				    </li>
+				    <li>
+				    <input type="radio" name="isfree" value="否" class="isfree" data-labelauty="否">
+				    </li>
+
+			    </ul>
+			    <input type="button" class="btn btn-default" id="clicktosearch" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" value="确认" onclick="changeothers();" />
+
+		    </div>
+
+
+		</div>
+		<div id="parentdiv">
+			 <div id="allbikes">
+					<?php
+					$perNum=20;
+					if(isset($_GET["page"]))
+					$page=$_GET["page"];
+					else
+					$page=1;
+
+					//$sql='select * from bike where bikecondition = 1 limit '.($page-1)*$perNum.",$perNum ";
+					//$result=mysql_query($sql,$conn);
+					if(count($arr)>=$perNum)
+					{
+						$k=$perNum;
+					}
+					else
+					{
+						$k=count($arr);
+					}
+
+					for($i=0;$i<$k;$i++)
+					{
+						$n++;
+						echo "<div name='re_bikes' class='bikes' >";
+						echo '<a class="bikelink" href=" detail.php?bid='.$arr[$i]['bid'].' " target="_blank">';
+						echo "<img  class='bikeimg' src='".$arr[$i]['bigthumbphoto1']." '>";
+						echo '<p class="bikeprice"><label class="daypricelabel">&yen;'.$arr[$i]['dayprice'].'</label>&nbsp;/天&nbsp;&nbsp;&yen;'.$arr[$i]['hourprice'].'/时&nbsp;&yen;'.$arr[$i]['weekprice'].'/周</p>';
+						echo '<p class="bikename">'.$arr[$i]['bikename'].'</p>';
+						echo '<p class="bikesubtitle">'.$arr[$i]['biketype']."-".$arr[$i]['school'].$arr[$i]['address'].'</p>';
+						echo "</a></div>";
+					}
+
+					$_SESSION['page']=$page;
+
+					if($i==$perNum){
+echo <<< EOT
+						<script type="text/javascript">
+							var div=document.createElement("div");
+								div.name='getmorediv';
+								div.setAttribute('class','getmorediv');
+				div.setAttribute('id','getmorediv');
+								div.innerHTML="<input class='getmore' id='getmorebuttom' type='button' value='点击获取更多' onclick='getmore();' />";
+							document.getElementById('parentdiv').appendChild(div);
+						</script>
+EOT;
+					}
+			//		else
+		//			echo '<br><div name="nobike_msg" style="float:left;border:1px solid #ffffff;margin:5px;"><br><p>没有更多啦！</p></div>';
+					?>
+			 </div>
+		</div>
+	</div>
+
+	<div id="maparea" style="padding:0px"></div>
+
+</div>
+
+<footer>
+</footer>
+
+
+<script src="../js/jquery-labelauty.js"></script>
+<script type="text/javascript">
+
+
+//动态加载css文件
+function loadjscssfile(filename,filetype){
+
+    if(filetype == "js"){
+        var fileref = document.createElement('script');
+        fileref.setAttribute("type","text/javascript");
+        fileref.setAttribute("src",filename);
+    }else if(filetype == "css"){
+
+        var fileref = document.createElement('link');
+        fileref.setAttribute("rel","stylesheet");
+        fileref.setAttribute("type","text/css");
+        fileref.setAttribute("href",filename);
+    }
+   if(typeof fileref != "undefined"){
+        document.getElementsByTagName("head")[0].appendChild(fileref);
+    }
+
+}
+
+	// alert("this msg is for");
+
+	/*美化按钮*/
+	$(document).ready(function(){
+		$(':input').labelauty();
+	});
+
+	$(document).ready(function(){
+		var w = $(window).height();
+		$("#mainblock").height(w);
+	});
+
+
+	$(document).ready(function(){
+	var w = $(window).width() - $("#leftblock").width;
+	$("#maparea").width(w);
+	});
+	//再设置显示区域
+	$(document).ready(function(){
+		var w = $("#leftblock").height();
+		$("#maparea").height(w);
+	});
+
+
+	// 百度地图API功能
+	var map = new BMap.Map("maparea");            // 创建Map实例
+	var point = new BMap.Point(116.367655, 39.968237);
+	map.centerAndZoom(point, 14);
+	var point1 = new BMap.Point(1, 1);
+	var mysize = new BMap.Size(66,85);
+	var myicon = new BMap.Icon("image/map.png",mysize);
+	var marker = new BMap.Marker(point1);        // 创建标注
+	map.addOverlay(marker);
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+
+	function cli(e){
+		marker.setPosition(e.point);
+		marker.enableDragging();
+		var plng = e.point.lng;
+		var plat = e.point.lat;
+		$(document).ready(function(){
+			$("#lng").val(plng);
+			$("#lat").val(plat);
+		});
+	}
+
+	function dend(e){
+		var plng = e.point.lng;
+		var plat = e.point.lat;
+		$(document).ready(function(){
+			$("#lng").val(plng);
+			$("#lat").val(plat);
+		});
+		// alert(e.point.lng+"  "+e.point.lat);
+	}
+	//map.addEventListener("click",cli);
+	marker.addEventListener("dragend",dend);
+	//删除div所有节点
+	function removeAllChild()
+	{
+	    var oEle = document.getElementsByName("re_bikes");
+		if(oEle.length)
+		{
+		   for(var i = 0 ;i<oEle.length;i++){
+		      oEle[i].style.display="none";
+		  }
+		}
+	}
+
+		function changemap()
+		{
+
+			var v1=document.getElementById('getmorediv');
+			if(v1 != null)
+			{
+			    v1.parentNode.removeChild(v1);
+			}
+
+			var v1=document.getElementById('none_msg');
+			if(v1 != null)
+			{
+			    v1.parentNode.removeChild(v1);
+			}
+			var v1=document.getElementById('nobike_msg');
+			if(v1 != null)
+			{
+			    v1.parentNode.removeChild(v1);
+			}
+
+
+// document.getElementById("getmorebuttom").style.display = "none";
+			// var rmdiv = document.getElementById("getmorediv");
+			// document.getElementById("leftblock").removeChild(rmdiv);
+			// document.getElementById('getmorediv').style.display = "none";
+		var city=document.getElementById('citylist').value;
+		var school= document.getElementById('schoollist').value;
+		var starttime= document.getElementById('starttime').value;
+		var endtime= document.getElementById('endtime').value;
+
+		var timestamp1 = Date.parse(new Date(starttime));
+		var timestamp2 = Date.parse(new Date(endtime));
+
+		if(timestamp1>timestamp2)
+		{
+			var ex=starttime;
+			starttime=endtime;
+			endtime=ex;
+			document.getElementById('starttime').value=starttime;
+			document.getElementById('endtime').value=endtime;
+		}
+
+	    var point = new BMap.Point(116.331398,39.897445);
+	    map.centerAndZoom(point,12);
+	    var myGeo = new BMap.Geocoder();
+
+	    if(school=="全部")
+	    {
+	    	 window.location.href="../functions/search.php?starttime="+starttime+"&endtime="+endtime;
+	    	return false;
+	    }
+	   // alert(starttime);
+	    myGeo.getPoint(school, function(point)
+	    {
+			if (point)
+			{
+				map.centerAndZoom(point, 18);
+			}
+			else
+			{
+				alert("您选择地址没有解析到结果!");
+			}
+		}, "北京市");
+
+	    xml=createXMLHttpRequest();
+	    xml.open("POST","changeschool.php",true);
+	    xml.setRequestHeader("Content-Type","application/x-www-form-urlencoded;");
+	    var search_data="city="+city+"&school="+school+"&starttime="+starttime+"&endtime="+endtime;
+	    xml.onreadystatechange=function()
+	    {
+	    	if(xml.readyState==4 && xml.status==200)
+	    	{
+	    	//alert(xml.responseText);
+
+	    		if(xml.responseText==0)
+	    		{
+
+
+	    			removeAllChild();
+	    			var str=map.getOverlays;
+	                map.clearOverlays(str);
+	    		}
+	    		else
+	    		{
+	    			eval("var arr=" + xml.responseText);
+	    			removeAllChild();
+	    			var n=arr.length;
+	    			if(arr.length>20)
+	    			{
+	    				n=20;
+	    			}
+	    			 for(var key=0;key<n;key++)
+				        {
+
+				        	var bikepricep = document.createElement("p");
+				        	bikepricep.setAttribute("class","bikeprice");
+
+				        	var daypricelabel = document.createElement("label");
+				        	daypricelabel.setAttribute("class","daypricelabel");
+
+				        	var bikenamep = document.createElement("p");
+				        	bikenamep.setAttribute("class","bikename");
+
+				        	var bikesubtitlep = document.createElement("p");
+				        	bikesubtitlep.setAttribute("class","bikesubtitle");
+
+
+				        	daypricelabel.innerHTML = arr[key]['dayprice'];
+
+				        	//bikepricep.appendChild(daypricelabel);
+				        	// bikepricep.innerHTML = daypricelabel;
+				        	bikepricep.innerHTML = "<label class='daypricelabel'>"+'&yen;'+arr[key]['dayprice']+"</label>" + '&nbsp;/天&nbsp;&nbsp;'+'&yen;'+arr[key]['hourprice']+'/时&nbsp;&nbsp;'+'&yen;'+arr[key]['weekprice']+'/周';
+
+				        	bikenamep.innerHTML = arr[key]['bikename'];
+				        	bikesubtitlep.innerHTML = arr[key]['biketype']+'-'+arr[key]['school'] + arr[key]['address'];
+
+
+
+
+				        	// var binklinka = document.createElement("a");
+				        	var bikesdiv = document.createElement("div");
+				          var div=document.createElement("div");
+				          var label = document.createElement("label");
+				          // var p1=document.createElement('p');
+				          // var p2=document.createElement('p');
+				          var img=document.createElement('img');
+				          img.src=arr[key]['bigthumbphoto1'];
+				          img.setAttribute("class","bikeimg");
+				          var a=document.createElement('a');
+				          a.setAttribute("class","bikelink");
+				          a.target="_blank";
+				          a.href='detail.php?bid='+arr[key]['bid'];
+
+				          // p1.innerHTML='地址：'+arr[key]['school']+arr[key]['address'];
+				          // p2.innerHTML='价格：';
+				          div.setAttribute("class", "bikes");
+				          div.setAttribute('name','re_bikes');
+				          a.appendChild(img);
+				          a.appendChild(bikepricep);
+				          a.appendChild(bikenamep);
+				          a.appendChild(bikesubtitlep);
+				          div.appendChild(a);
+				         document.getElementById('allbikes').appendChild(div);
+
+				         loadjscssfile("http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css","css");
+				         loadjscssfile("../css/search.css","css");
+				         //console.log(div.parentNode);
+				        }
+				        var div=document.createElement("div");
+				        if(arr.length>=20)
+				        {
+				        	div.name='re_bikes';
+				        	div.setAttribute('class','getmorediv');
+				        	div.setAttribute('id','getmorediv');
+				            //div.id="getmorediv";
+				        	div.innerHTML="<input class='getmore' id='getmorebuttom' type='button' value='点击获取更多' onclick='getmore();' />";
+				        }
+				        else
+				        {
+
+				        }
+				        document.getElementById('parentdiv').appendChild(div);
+
+	                   var str=map.getOverlays;
+	                   map.clearOverlays(str);
+	                	for(var a=0;a<arr.length;a++)
+						{
+							var sContent="<div style='width:302px;'><a href='detail.php?bid="+arr[a]['bid']+"' target='_blank' style='text-decoration:none'><img style='width:300px;height:225px;' src='"+arr[a]['photo1']+"' title='单车照片'/>" +
+							"<p class='bikeprice' style=''><label class='daypricelabel'>&yen;"+arr[a]['dayprice']+"</label>/天"+"&nbsp;&nbsp;&yen;"+arr[a]['hourprice']+"/时&nbsp;&yen;"+arr[a]['weekprice']+"/周</p><p class='bikename' style=''>"+arr[a]['bikename']+"</p><p class='bikesubtitle'>"+arr[a]['biketype']+"-"+arr[a]['school']+arr[a]['address']+"</p>"
+							"</a></div>";
+
+						var myIcon = new BMap.Icon("../image/map.png", new BMap.Size(40, 55),
+						{ offset: new BMap.Size(0, 0),
+						imageOffset: new BMap.Size(0, -1)
+						});
+						if(a==0)
+						{
+							map.centerAndZoom(new BMap.Point(arr[a]['lon'],arr[a]['lat']), 18);
+						}
+						var marker = new BMap.Marker(new BMap.Point(arr[a]['lon'],arr[a]['lat']),{icon:myIcon});  // 创建标注
+						map.addOverlay(marker);
+						addClickHandler(sContent,marker);
+
+
+						}
+	    		}
+	    	}
+	    }
+	    xml.send(search_data);
+
+	}
+
+
+	    function addMarker(point)
+	    {
+			var myIcon = new BMap.Icon("../image/map.png", new BMap.Size(100, 100),
+			{ offset: new BMap.Size(21, 21),
+			imageOffset: new BMap.Size(0, -1)
+			});
+			var marker = new BMap.Marker(point, { icon: myIcon });
+			map.addOverlay(marker);
+			marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+		}
+
+	    var arr=new Array();
+	    arr=<?php echo  json_encode($arr); ?>;
+		for(var a=0;a<arr.length;a++)
+		{
+
+			var sContent="<div style='width:302px;'><a href='detail.php?bid="+arr[a]['bid']+"' target='_blank' style='text-decoration:none'><img style='width:300px;height:225px;' src='"+arr[a]['photo1']+"' title='单车照片'/>" +
+			"<p class='bikeprice' style=''><label class='daypricelabel'>&yen;"+arr[a]['dayprice']+"</label>/天"+"&nbsp;&nbsp;&yen;"+arr[a]['hourprice']+"/时&nbsp;&yen;"+arr[a]['weekprice']+"/周</p><p class='bikename' style=''>"+arr[a]['bikename']+"</p><p class='bikesubtitle'>"+arr[a]['biketype']+"-"+arr[a]['school']+arr[a]['address']+"</p>"
+			"</a></div>";
+
+			var myIcon = new BMap.Icon("../image/map.png", new BMap.Size(40, 60),
+			{ offset: new BMap.Size(0, 0),
+			imageOffset: new BMap.Size(0, -1)
+			});
+
+			var marker = new BMap.Marker(new BMap.Point(arr[a]['lon'],arr[a]['lat']),{icon:myIcon});  // 创建标注
+			if(a==0)
+			{
+				map.centerAndZoom(new BMap.Point(arr[a]['lon'],arr[a]['lat']), 18);
+			}
+			//alert('a');
+			map.addOverlay(marker);
+			addClickHandler(sContent,marker);
+
+
+		}
+		function addClickHandler(content,marker){
+			marker.addEventListener("click",function(e){
+				openInfo(content,e)}
+			);
+		}
+		function openInfo(content,e){
+			var p = e.target;
+			var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
+			var infoWindow = new BMap.InfoWindow(content);  // 创建信息窗口对象
+			map.openInfoWindow(infoWindow,point); //开启信息窗口
+		}
+
+
+		    function openme(){
+
+		    	document.getElementById('div1').style.display='block';
+
+		    	document.getElementById('div2').style.display='block';
+
+		    	document.getElementById("div1").style.opacity = 0.8;
+
+
+
+			}
+			function closeme()
+			{
+				document.getElementById('div1').style.display='none';
+
+				document.getElementById('div2').style.display='none';
+			}
+
+	function createXMLHttpRequest()
+	 {
+	  var xmlHttp=null;
+	    if (window.XMLHttpRequest)
+	    {
+	       xmlHttp = new XMLHttpRequest(); //FireFox、Opera等浏览器支持的创建方式
+	    } else
+	    {
+	       xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");//IE浏览器支持的创建方式
+	    }
+	    return xmlHttp;
+	}
+
+	 function getmore()
+	 {
+
+		var v1=document.getElementById('none_msg');
+		if(v1 != null)
+		{
+			v1.parentNode.removeChild(v1);
+		}
+
+	 	var city=document.getElementById('citylist').value;
+		var school= document.getElementById('schoollist').value;
+	    var starttime= document.getElementById('starttime').value;
+		var endtime= document.getElementById('endtime').value;
+
+		var timestamp1 = Date.parse(new Date(starttime));
+		var timestamp2 = Date.parse(new Date(endtime));
+
+		if(timestamp1>timestamp2)
+		{
+			var ex=starttime;
+			starttime=endtime;
+			endtime=ex;
+			document.getElementById('starttime').value=starttime;
+			document.getElementById('endtime').value=endtime;
+		}
+
+
+		var data ="city="+city+"&school="+school+"&starttime="+starttime+"&endtime="+endtime;
+	 	var xhr=new createXMLHttpRequest();
+	 	xhr.open('POST','addpages.php',true);
+	    xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded;");
+	    xhr.onreadystatechange=function()
+	    {
+		    if(xhr.readyState ==4 && xhr.status ==200)
+		    {
+		      if(xhr.responseText == 0)
+		     {
+			    var v1=document.getElementById('nobike_msg');
+				if(v1 != null)
+				{
+				    v1.parentNode.removeChild(v1);
+				}
+		        var li=document.createElement("div");
+				li.setAttribute('id','nobike_msg');
+		        li.innerHTML="已经没有啦！";
+		        document.getElementById('allbikes').appendChild(li);
+				document.getElementById('getmorediv').style.display='none';
+		     }
+		      else
+		      {
+		        //alert(xhr.responseText);
+		        //return false;
+		        var arr=eval(xhr.responseText);
+		       // eval("var arr=" + xhr.responseText);
+		        var n=0
+		        for(var key in arr)
+		        {
+
+		        	var bikepricep = document.createElement("p");
+		        	bikepricep.setAttribute("class","bikeprice");
+
+		        	var daypricelabel = document.createElement("label");
+		        	daypricelabel.setAttribute("class","daypricelabel");
+
+		        	var bikenamep = document.createElement("p");
+		        	bikenamep.setAttribute("class","bikename");
+
+		        	var bikesubtitlep = document.createElement("p");
+		        	bikesubtitlep.setAttribute("class","bikesubtitle");
+
+
+		        	daypricelabel.innerHTML = arr[key]['dayprice'];
+
+		        	//bikepricep.appendChild(daypricelabel);
+		        	// bikepricep.innerHTML = daypricelabel;
+		        	bikepricep.innerHTML = "<label class='daypricelabel'>"+'&yen;'+arr[key]['dayprice']+"</label>" + '&nbsp;/天&nbsp;&nbsp;'+'&yen;'+arr[key]['hourprice']+'/时&nbsp;&nbsp;'+'&yen;'+arr[key]['weekprice']+'/周';
+
+		        	bikenamep.innerHTML = arr[key]['bikename'];
+		        	bikesubtitlep.innerHTML = arr[key]['biketype']+'-'+arr[key]['school'] + arr[key]['address'];
+		        	// var binklinka = document.createElement("a");
+		        	var bikesdiv = document.createElement("div");
+		        	var div=document.createElement("div");
+		        	var label = document.createElement("label");
+		        	// var p1=document.createElement('p');
+		        	// var p2=document.createElement('p');
+		        	var img=document.createElement('img');
+		        	img.src=arr[key]['bigthumbphoto1'];
+		        	img.setAttribute("class","bikeimg");
+		        	var a=document.createElement('a');
+		        	a.setAttribute("class","bikelink");
+		        	a.target="_blank";
+		        	a.href='detail.php?bid='+arr[key]['bid'];
+
+		        	// p1.innerHTML='地址：'+arr[key]['school']+arr[key]['address'];
+		        	// p2.innerHTML='价格：';
+		        	div.setAttribute("class", "bikes");
+		        	div.setAttribute('name','re_bikes');
+		        	a.appendChild(img);
+		        	a.appendChild(bikepricep);
+		        	a.appendChild(bikenamep);
+		        	a.appendChild(bikesubtitlep);
+		        	div.appendChild(a);
+		        	document.getElementById('allbikes').appendChild(div);
+
+		        	loadjscssfile("http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css","css");
+		        	loadjscssfile("../css/search.css","css");
+		        }
+		        if(n<20)
+		        {
+		        	//document.getElementById('getmorediv').style.display='none';
+		        }
+
+		      }
+		    }
+		}
+
+	  xhr.send(data);
+	 }
+
+
+	function click1()
+	{
+	    window.location.href="submit.php";
+	}
+	function click2()
+	{
+	    window.location.href="../logout.php";
+	}
+	function click3()
+	{
+	    window.location.href="selfcenter.php";
+	}
+
+	  function clicksubmit()
+	  {
+	     var xml=createXMLHttpRequest();
+	     xml.open("POST","../islogin.php",true);
+	     xml.setRequestHeader("Content-Type","application/x-www-form-urlencoded;");
+	     xml.onreadystatechange=function()
+	        {
+	           if (xml.readyState==4 && xml.status==200)
+	                {
+
+	                  if(xml.responseText == 0)
+	                    {
+
+	                       alert("请您先登录haha");
+
+	                    }
+	                   else
+	                    {
+	                       window.location.href="submit.php";
+	                    }
+	                }
+	        }
+
+	    xml.send(null);
+
+	  }
+
+
+	function addCookie(name,value,days,path){   /**添加设置cookie**/
+	    var name = escape(name);
+	    var value = escape(value);
+	    var expires = new Date();
+	    expires.setTime(expires.getTime() + days * 3600000 * 24);
+	    //path=/，表示cookie能在整个网站下使用，path=/temp，表示cookie只能在temp目录下使用
+	    path = path == "" ? "" : ";path=" + path;
+	    //GMT(Greenwich Mean Time)是格林尼治平时，现在的标准时间，协调世界时是UTC
+	    //参数days只能是数字型
+	    var _expires = (typeof days) == "string" ? "" : ";expires=" + expires.toUTCString();
+	    document.cookie = name + "=" + value + _expires + path;
+	}
+	function getCookieValue(name){  /**获取cookie的值，根据cookie的键获取值**/
+	    //用处理字符串的方式查找到key对应value
+	    var name = escape(name);
+	    //读cookie属性，这将返回文档的所有cookie
+	    var allcookies = document.cookie;
+	    //查找名为name的cookie的开始位置
+	    name += "=";
+	    var pos = allcookies.indexOf(name);
+	    //如果找到了具有该名字的cookie，那么提取并使用它的值
+	    if (pos != -1){                                             //如果pos值为-1则说明搜索"version="失败
+	        var start = pos + name.length;                  //cookie值开始的位置
+	        var end = allcookies.indexOf(";",start);        //从cookie值开始的位置起搜索第一个";"的位置,即cookie值结尾的位置
+	        if (end == -1) end = allcookies.length;        //如果end值为-1说明cookie列表里只有一个cookie
+	        var value = allcookies.substring(start,end); //提取cookie的值
+	        return (value);                           //对它解码
+	    }else{  //搜索失败，返回空字符串
+	        return "";
+	    }
+	}
+	function deleteCookie(name,path){   /**根据cookie的键，删除cookie，其实就是设置其失效**/
+	    var name = escape(name);
+	    var expires = new Date(0);
+	    path = path == "" ? "" : ";path=" + path;
+	    document.cookie = name + "="+ ";expires=" + expires.toUTCString() + path;
+	}
+
+	/**实现功能，保存用户的登录信息到cookie中。当登录页面被打开时，就查询cookie**/
+	window.onload = function(){
+	    var userNameValue = getCookieValue("userName");
+	    document.getElementById("tell").value = userNameValue;
+	    var userPassValue = getCookieValue("userPass");
+	    document.getElementById("password").value = userPassValue;
+	    var objChk = document.getElementById("chkRememberPass");
+	    //cookie保存用户名密码
+	    if(objChk.checked)
+	      {
+	        addCookie("userName",userName,7,"/");
+	        addCookie("userPass",userPass,7,"/");
+
+
+	      }
+
+	}
+
+	function userLogin()
+	{
+	    document.cookie = name + "="+ ";expires=" + expires.toUTCString() + path;
+	}
+
+	/**实现功能，保存用户的登录信息到cookie中。当登录页面被打开时，就查询cookie**/
+	window.onload = function(){
+	    var userNameValue = getCookieValue("userName");
+	    document.getElementById("tell").value = userNameValue;
+	    var userPassValue = getCookieValue("userPass");
+	    document.getElementById("password").value = userPassValue;
+	    var objChk = document.getElementById("chkRememberPass");
+	    //cookie保存用户名密码
+	    if(objChk.checked)
+	      {
+	        addCookie("userName",userName,7,"/");
+	        addCookie("userPass",userPass,7,"/");
+
+
+	      }
+
+	}
+
+	function userLogin()
+	{
+	    var userName = document.getElementById("tell").value;
+	    var userPass = document.getElementById("password").value;
+	    var vcode=document.getElementById("vcode").value;
+	    if(userName == "" || isNaN(userName))
+	     {
+	        alert("请输入正确的手机号");
+	     }
+	    else
+	    {
+	        if(userName.length !=11)
+	        {
+	         alert("请输入正确的手机号");
+	        }
+	       else
+	       {
+	            var xml=createXMLHttpRequest();
+	            var post_method="username="+userName+"&password="+userPass+"&vcode="+vcode;
+	            xml.open("POST","../login.php",true);
+	            xml.setRequestHeader("Content-Type","application/x-www-form-urlencoded;");
+	            xml.onreadystatechange=function()
+	            {
+
+	                if (xml.readyState==4 && xml.status==200)
+	                {
+	                    if(xml.responseText == -1)
+	                    {
+	                        alert('请输入正确的验证码!');
+	                    }
+	                    else
+	                    {
+
+	                    if(xml.responseText == 0)
+	                    {
+	                    alert("手机或者密码错误！");
+	                    }
+	                    else
+	                      {
+	                        var objChk = document.getElementById("chkRememberPass");
+	                        if(objChk.checked)
+	                        {
+	                         addCookie("userName",userName,7,"/");
+	                         addCookie("userPass",userPass,7,"/");
+
+
+	                        }
+
+	                         location.reload();
+	                      }
+	                    }
+	                }
+
+	            }
+	           xml.send(post_method);
+	        }
+	    }
+	}
+
+
+	function GetRadioValue(RadioName){
+	    var obj;
+	    obj=document.getElementsByName(RadioName);
+	    if(obj!=null){
+	        var i;
+	        for(i=0;i<obj.length;i++){
+	            if(obj[i].checked){
+	                return obj[i].value;
+	            }
+	        }
+	    }
+	    return null;
+	}
+
+
+	function changeothers()
+	{
+		if(document.getElementById('clicktosearch').value=="确认")
+		{
+
+			var v1=document.getElementById('getmorediv');
+			if(v1 != null)
+			{
+			    v1.parentNode.removeChild(v1);
+			}
+			var v1=document.getElementById('none_msg');
+			if(v1 != null)
+			{
+			    v1.parentNode.removeChild(v1);
+			}
+			var v1=document.getElementById('nobike_msg');
+			if(v1 != null)
+			{
+			    v1.parentNode.removeChild(v1);
+			}
+
+			document.getElementById("spreaddetailsearch").style.display = "inline";
+			var city=document.getElementById('citylist').value;
+			var school= document.getElementById('schoollist').value;
+			var starttime= document.getElementById('starttime').value;
+			var endtime= document.getElementById('endtime').value;
+
+			var timestamp1 = Date.parse(new Date(starttime));
+			var timestamp2 = Date.parse(new Date(endtime));
+
+			if(timestamp1>timestamp2)
+			{
+				var ex=starttime;
+				starttime=endtime;
+				endtime=ex;
+				document.getElementById('starttime').value=starttime;
+				document.getElementById('endtime').value=endtime;
+			}
+
+
+		    var biketype=GetRadioValue('biketype');
+			var isfree=GetRadioValue('isfree');
+			var fitheight=document.getElementById('fitheight').value;
+			var price=document.getElementById('price').value;
+			//alert(city+school+starttime+endtime+biketype+isfree+fitheight+price);
+			var search_data="city="+city+"&school="+school+"&starttime="+starttime+"&endtime="+endtime+"&biketype="+biketype+"&isfree="+isfree+"&fitheight="+fitheight+"&price="+price;
+			//alert(search_data);
+			var xml=createXMLHttpRequest();
+			xml.open("POST","changeothers.php",true);
+		    xml.setRequestHeader("Content-Type","application/x-www-form-urlencoded;");
+			xml.onreadystatechange=function()
+			{
+		        if(xml.readyState==4 && xml.status==200)
+		        {
+		        	//alert(xml.responseText);
+		        	if(xml.responseText==0)
+		        		{
+		        			document.getElementById('allbikes').innerHTML="<div id='none_msg' style='text-align:center;margin-top:150px;font-size:20px;color:#bbb;'>(≧﹏ ≦)非常抱歉，没有找到您想要的单车，换个条件试试吧！</div>";
+		        			removeAllChild();
+		        			var str=map.getOverlays;
+		                    map.clearOverlays(str);
+		        		}
+		        		else
+		        		{
+		        			eval("var arr=" + xml.responseText);
+		        			removeAllChild();
+		        			var n=arr.length;
+		        			if(arr.length>20)
+		        			{
+		        				n=20;
+		        			}
+		        			 for(var key=0;key<n;key++)
+						        {
+
+						        	var bikepricep = document.createElement("p");
+						        	bikepricep.setAttribute("class","bikeprice");
+
+						        	var daypricelabel = document.createElement("label");
+						        	daypricelabel.setAttribute("class","daypricelabel");
+
+						        	var bikenamep = document.createElement("p");
+						        	bikenamep.setAttribute("class","bikename");
+
+						        	var bikesubtitlep = document.createElement("p");
+						        	bikesubtitlep.setAttribute("class","bikesubtitle");
+
+
+						        	daypricelabel.innerHTML = arr[key]['dayprice'];
+
+						        	//bikepricep.appendChild(daypricelabel);
+						        	// bikepricep.innerHTML = daypricelabel;
+						        	bikepricep.innerHTML = "<label class='daypricelabel'>"+'&yen;'+arr[key]['dayprice']+"</label>" + '&nbsp;/天&nbsp;&nbsp;'+'&yen;'+arr[key]['hourprice']+'/时&nbsp;&nbsp;'+'&yen;'+arr[key]['weekprice']+'/周';
+
+						        	bikenamep.innerHTML = arr[key]['bikename'];
+						        	bikesubtitlep.innerHTML = arr[key]['biketype']+'-'+arr[key]['school'] + arr[key]['address'];
+						        	// var binklinka = document.createElement("a");
+						        	var bikesdiv = document.createElement("div");
+						        	var div=document.createElement("div");
+						        	var label = document.createElement("label");
+						        	// var p1=document.createElement('p');
+						        	// var p2=document.createElement('p');
+						        	var img=document.createElement('img');
+						        	img.src=arr[key]['bigthumbphoto1'];
+						        	img.setAttribute("class","bikeimg");
+						        	var a=document.createElement('a');
+						        	a.setAttribute("class","bikelink");
+						        	a.target="_blank";
+						        	a.href='detail.php?bid='+arr[key]['bid'];
+
+						        	// p1.innerHTML='地址：'+arr[key]['school']+arr[key]['address'];
+						        	// p2.innerHTML='价格：';
+						        	div.setAttribute("class", "bikes");
+						        	div.setAttribute('name','re_bikes');
+						        	a.appendChild(img);
+						        	a.appendChild(bikepricep);
+						        	a.appendChild(bikenamep);
+						        	a.appendChild(bikesubtitlep);
+						        	div.appendChild(a);
+						        	document.getElementById('allbikes').appendChild(div);
+
+						        	// loadjscssfile("http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css","css");
+						        	loadjscssfile("../css/search.css","css");
+
+						        }
+						        var div=document.createElement("div");
+						        if(arr.length>=20)
+						        {
+
+		        					div.name='getmorediv';
+						        	div.setAttribute('class','getmorediv');
+	        						div.setAttribute('id','getmorediv');
+						           // div.id="getmorediv";
+						        	div.innerHTML="<input class='getmore' id='getmorebuttom' type='button' value='点击获取更多' onclick='getmore();' />";
+						        }
+						        else
+						        {
+
+						        }
+						        document.getElementById('parentdiv').appendChild(div);
+
+		                   		var str=map.getOverlays;
+		                    	map.clearOverlays(str);
+		                     	for(var a=0;a<arr.length;a++)
+								{
+
+									var sContent="<div style='width:302px;'><a href='detail.php?bid="+arr[a]['bid']+"' target='_blank' style='text-decoration:none'><img style='width:300px;height:225px;' src='"+arr[a]['photo1']+"' title='单车照片'/>" +
+							"<p class='bikeprice' style=''><label class='daypricelabel'>&yen;"+arr[a]['dayprice']+"</label>/天"+"&nbsp;&nbsp;&yen;"+arr[a]['hourprice']+"/时&nbsp;&yen;"+arr[a]['weekprice']+"/周</p><p class='bikename' style=''>"+arr[a]['bikename']+"</p><p class='bikesubtitle'>"+arr[a]['biketype']+"-"+arr[a]['school']+arr[a]['address']+"</p>"
+							"</a></div>";
+
+									/*var sContent="<div><a href='detail.php?bid="+arr[a]['bid']+"' target='_blank'><img style='width:300px;height:225px;' id='imgDemo' src='"+arr[a]['photo1']+"' title='单车照片'/>" +
+								"<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>地址："+arr[a]['school']+arr[a]['address']+"</p><p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>价格："+arr[a]['dayprice']+"/天"+arr[a]['hourprice']+"/时"+arr[a]['weekprice']+"/周</p>"+
+								"</a></div>";*/
+
+								var myIcon = new BMap.Icon("../image/map.png", new BMap.Size(100, 100),
+								{ offset: new BMap.Size(21, 21),
+								imageOffset: new BMap.Size(0, -1)
+								});
+
+									var marker = new BMap.Marker(new BMap.Point(arr[a]['lon'],arr[a]['lat']),{icon:myIcon});  // 创建标注
+
+									map.addOverlay(marker);
+									addClickHandler(sContent,marker);
+
+
+								}
+		        		}
+		        }
+			}
+			xml.send(search_data);
+		}
+		else
+		{
+			alert("haha");
+		}
+
+	}
+
+	$(function(){
+		$('.form_date').datetimepicker({
+			language:'zh-CN',
+		});
+	})
+
+</script>
+
+</body>
+</html>
+

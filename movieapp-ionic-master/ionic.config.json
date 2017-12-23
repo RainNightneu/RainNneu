@@ -1,0 +1,8 @@
+{
+  "name": "movieapp",
+  "app_id": "216ad03e",
+  "integrations": {
+    "gulp": {}
+  },
+  "type": "ionic-angular"
+}
