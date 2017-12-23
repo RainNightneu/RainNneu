@@ -1,0 +1,44 @@
+<app-header></app-header>
+<app-hero-area [banner]="banner"></app-hero-area>
+<app-search-bar (searchChange)="onSearch($event)"></app-search-bar>
+<main>
+  <div class="container main-container">
+    <div class="section-header">
+      <div class="row">
+        <div class="col-sm-6">
+          <h2 class="title"><i class="fa fa-film" aria-hidden="true"></i>Movies</h2>
+        </div>
+        <div class="col-sm-6 extra-features">
+          <div [ngClass]="{'active': showDropdown}" class="movies-genre">
+            <span (click)="toggleDropdown()">Choose a genre<i class="fa fa-angle-down" aria-hidden="true"></i></span>
+            <ul class="list">
+              <li [ngClass]="{'selected': genre === showGenre}" (click)="setGenre(genre)" *ngFor="let genre of genres"><i class="fa fa-angle-right" aria-hidden="true"></i>{{genre}}</li>
+            </ul>
+            <button (click)="RateMovieList()">Rate</button>   
+            <button (click)="LengthMovieList()">Length</button>  
+            <button (click)="PriceMovieList()">Price</button>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--section-header-->
+    <div class="row">
+      <div *ngFor="let movie of movieList | search: searchPhrase | genre: showGenre " [routerLink]="['/movie', movie.id]" class="col-md-2 col-sm-4 col-xs-6 col-lg-2 movie-box">
+        <div class="movie-item">
+          <div class="movie-poster">
+            <img src="./assets/images/movie-covers/{{movie.img}}" alt="">
+          </div>
+        </div>
+        <div class="movie-info">
+          <div class="movie-movie-title">{{movie.name}}</div>
+          <div class="details">
+            <span class="rate">Rate: {{movie.rate}}</span>
+            <span class="length">{{movie.length}}</span>
+            <span> ${{movie.price}}</span>    <!--新增价格 -->
+          </div>
+        </div>
+      </div>
+      <!--item-->
+    </div>
+  </div>
+</main>
