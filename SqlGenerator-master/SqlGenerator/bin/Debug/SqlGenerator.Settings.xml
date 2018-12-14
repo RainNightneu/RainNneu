@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ConnectionStrings>
+    <string>Server=BOS1WSD11040I02\SSAS2014; Database=UnderWriting; Trusted_Connection=SSPI; User ID=; Password=;</string>
+  </ConnectionStrings>
+  <TableName>U</TableName>
+  <FilePath>\\global.pioneer.com\fs\homedrv\BOS1\tzhang\My Documents\Andrew\CLASSBAL Total Exclusion List 20181210.xlsx</FilePath>
+  <SheetName>Sheet2</SheetName>
+  <ConnectionKey>Northwind</ConnectionKey>
+  <FileType>Excel</FileType>
+  <Delimiter>Semicolon</Delimiter>
+  <SelectedConnectionString>Server=BOS1WSD11040I02\SSAS2014; Database=UnderWriting; Trusted_Connection=SSPI; User ID=; Password=;</SelectedConnectionString>
+</Settings>
